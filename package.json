@@ -1,0 +1,31 @@
+{
+  "name": "adapt-cli",
+  "version": "0.0.0",
+  "description": "Command line tools for Adapt",
+  "main": "./lib/cli.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bower": "~1.2.7",
+    "chalk": "~0.3.0",
+    "lodash": "~2.2.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "expect.js": "~0.2.0",
+    "sinon": "~1.7.3",
+    "grunt": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0",
+    "matchdep": "~0.3.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "",
+  "repository": "http://github.com/cajones/adapt-cli",
+  "license": "GPLv3",
+  "bin": {
+    "adapt": "./bin/adaptbin"
+  }
+}
