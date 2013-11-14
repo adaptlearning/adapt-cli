@@ -22,9 +22,3 @@ Searching for an Adapt plugin.
 Installing a plugin into your current directory
 
 	adapt install {name of plugin}
-
-This will display a list of all the plugins that match the 
-
-Installing a specific version of a plugin
-
-	adapt install {name of plugin}#{version number}
