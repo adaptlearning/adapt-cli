@@ -1,0 +1,223 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.21
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\CHRISJ~1.SPO\\AppData\\Local\\Temp\\npm-3504-HrHKE6ru\\1384448917448-0.0035823099315166473\\tmp.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+13 verbose folder .
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\1f1177db-tar.lock
+16 silly lockFile 6e8d5b95-48-0-0035823099315166473-tmp-tgz tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+17 verbose lock tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\6e8d5b95-48-0-0035823099315166473-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 6e8d5b95-48-0-0035823099315166473-tmp-tgz tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+21 silly lockFile 6e8d5b95-48-0-0035823099315166473-tmp-tgz tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+22 verbose tar unpack C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+23 silly lockFile eda2498d-48-0-0035823099315166473-package tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+24 verbose lock tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\eda2498d-48-0-0035823099315166473-package.lock
+25 silly lockFile 6e8d5b95-48-0-0035823099315166473-tmp-tgz tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+26 verbose lock tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\6e8d5b95-48-0-0035823099315166473-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+30 silly gunzTarPerm extractEntry .npmignore
+31 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+34 silly gunzTarPerm extractEntry gruntfile.js
+35 silly gunzTarPerm modified mode [ 'gruntfile.js', 438, 420 ]
+36 silly gunzTarPerm extractEntry .bowerrc
+37 silly gunzTarPerm modified mode [ '.bowerrc', 438, 420 ]
+38 silly gunzTarPerm extractEntry bin/adapt
+39 silly gunzTarPerm modified mode [ 'bin/adapt', 438, 420 ]
+40 silly gunzTarPerm extractEntry lib/AdaptConsoleApplication.js
+41 silly gunzTarPerm modified mode [ 'lib/AdaptConsoleApplication.js', 438, 420 ]
+42 silly gunzTarPerm extractEntry lib/cli.js
+43 silly gunzTarPerm modified mode [ 'lib/cli.js', 438, 420 ]
+44 silly gunzTarPerm extractEntry lib/CommandParser.js
+45 silly gunzTarPerm modified mode [ 'lib/CommandParser.js', 438, 420 ]
+46 silly gunzTarPerm extractEntry lib/ConsoleRenderer.js
+47 silly gunzTarPerm modified mode [ 'lib/ConsoleRenderer.js', 438, 420 ]
+48 silly gunzTarPerm extractEntry lib/PackageMeta.js
+49 silly gunzTarPerm modified mode [ 'lib/PackageMeta.js', 438, 420 ]
+50 silly gunzTarPerm extractEntry lib/Plugin.js
+51 silly gunzTarPerm modified mode [ 'lib/Plugin.js', 438, 420 ]
+52 silly gunzTarPerm extractEntry lib/PluginTypeResolver.js
+53 silly gunzTarPerm modified mode [ 'lib/PluginTypeResolver.js', 438, 420 ]
+54 silly gunzTarPerm extractEntry lib/RendererHelpers.js
+55 silly gunzTarPerm modified mode [ 'lib/RendererHelpers.js', 438, 420 ]
+56 silly gunzTarPerm extractEntry lib/commands/index.js
+57 silly gunzTarPerm modified mode [ 'lib/commands/index.js', 438, 420 ]
+58 silly gunzTarPerm extractEntry lib/commands/install.js
+59 silly gunzTarPerm modified mode [ 'lib/commands/install.js', 438, 420 ]
+60 silly gunzTarPerm extractEntry lib/commands/search.js
+61 silly gunzTarPerm modified mode [ 'lib/commands/search.js', 438, 420 ]
+62 silly gunzTarPerm extractEntry lib/commands/uninstall.js
+63 silly gunzTarPerm modified mode [ 'lib/commands/uninstall.js', 438, 420 ]
+64 silly gunzTarPerm extractEntry test/specs/install_concerns.js
+65 silly gunzTarPerm modified mode [ 'test/specs/install_concerns.js', 438, 420 ]
+66 silly gunzTarPerm extractEntry test/specs/search_concerns.js
+67 silly gunzTarPerm modified mode [ 'test/specs/search_concerns.js', 438, 420 ]
+68 silly gunzTarPerm extractEntry test/specs/type_resolution_concerns.js
+69 silly gunzTarPerm modified mode [ 'test/specs/type_resolution_concerns.js', 438, 420 ]
+70 silly gunzTarPerm extractEntry test/specs/uninstall_concerns.js
+71 silly gunzTarPerm modified mode [ 'test/specs/uninstall_concerns.js', 438, 420 ]
+72 silly gunzTarPerm extractEntry VERSION
+73 silly gunzTarPerm modified mode [ 'VERSION', 438, 420 ]
+74 silly lockFile eda2498d-48-0-0035823099315166473-package tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+75 silly lockFile eda2498d-48-0-0035823099315166473-package tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+76 silly lockFile 6e8d5b95-48-0-0035823099315166473-tmp-tgz tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+77 silly lockFile 6e8d5b95-48-0-0035823099315166473-tmp-tgz tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\tmp.tgz
+78 verbose tar pack [ 'C:\\Users\\chrisjones.SPONGE\\AppData\\Roaming\\npm-cache\\adapt-cli\\0.0.3\\package.tgz',
+78 verbose tar pack   'C:\\Users\\CHRISJ~1.SPO\\AppData\\Local\\Temp\\npm-3504-HrHKE6ru\\1384448917448-0.0035823099315166473\\package' ]
+79 verbose tarball C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+80 verbose folder C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+81 silly lockFile eda2498d-48-0-0035823099315166473-package tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+82 verbose lock tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\eda2498d-48-0-0035823099315166473-package.lock
+83 silly lockFile 7849566c-ache-adapt-cli-0-0-3-package-tgz tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+84 verbose lock tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\7849566c-ache-adapt-cli-0-0-3-package-tgz.lock
+85 silly lockFile eda2498d-48-0-0035823099315166473-package tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+86 silly lockFile eda2498d-48-0-0035823099315166473-package tar://C:\Users\CHRISJ~1.SPO\AppData\Local\Temp\npm-3504-HrHKE6ru\1384448917448-0.0035823099315166473\package
+87 silly lockFile 7849566c-ache-adapt-cli-0-0-3-package-tgz tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+88 silly lockFile 7849566c-ache-adapt-cli-0-0-3-package-tgz tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+89 silly lockFile 311a0ffb-pm-cache-adapt-cli-0-0-3-package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package
+90 verbose lock C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\311a0ffb-pm-cache-adapt-cli-0-0-3-package.lock
+91 silly lockFile 311a0ffb-pm-cache-adapt-cli-0-0-3-package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package
+92 silly lockFile 311a0ffb-pm-cache-adapt-cli-0-0-3-package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package
+93 verbose tar unpack C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+94 silly lockFile 45c3cfd4-pm-cache-adapt-cli-0-0-3-package tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package
+95 verbose lock tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\45c3cfd4-pm-cache-adapt-cli-0-0-3-package.lock
+96 silly lockFile 7849566c-ache-adapt-cli-0-0-3-package-tgz tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+97 verbose lock tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\7849566c-ache-adapt-cli-0-0-3-package-tgz.lock
+98 silly gunzTarPerm modes [ '755', '644' ]
+99 silly gunzTarPerm extractEntry package.json
+100 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+101 silly gunzTarPerm extractEntry .npmignore
+102 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+103 silly gunzTarPerm extractEntry README.md
+104 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+105 silly gunzTarPerm extractEntry gruntfile.js
+106 silly gunzTarPerm modified mode [ 'gruntfile.js', 438, 420 ]
+107 silly gunzTarPerm extractEntry .bowerrc
+108 silly gunzTarPerm modified mode [ '.bowerrc', 438, 420 ]
+109 silly gunzTarPerm extractEntry bin/adapt
+110 silly gunzTarPerm modified mode [ 'bin/adapt', 438, 420 ]
+111 silly gunzTarPerm extractEntry lib/AdaptConsoleApplication.js
+112 silly gunzTarPerm modified mode [ 'lib/AdaptConsoleApplication.js', 438, 420 ]
+113 silly gunzTarPerm extractEntry lib/cli.js
+114 silly gunzTarPerm modified mode [ 'lib/cli.js', 438, 420 ]
+115 silly gunzTarPerm extractEntry lib/CommandParser.js
+116 silly gunzTarPerm modified mode [ 'lib/CommandParser.js', 438, 420 ]
+117 silly gunzTarPerm extractEntry lib/ConsoleRenderer.js
+118 silly gunzTarPerm modified mode [ 'lib/ConsoleRenderer.js', 438, 420 ]
+119 silly gunzTarPerm extractEntry lib/PackageMeta.js
+120 silly gunzTarPerm modified mode [ 'lib/PackageMeta.js', 438, 420 ]
+121 silly gunzTarPerm extractEntry lib/Plugin.js
+122 silly gunzTarPerm modified mode [ 'lib/Plugin.js', 438, 420 ]
+123 silly gunzTarPerm extractEntry lib/PluginTypeResolver.js
+124 silly gunzTarPerm modified mode [ 'lib/PluginTypeResolver.js', 438, 420 ]
+125 silly gunzTarPerm extractEntry lib/RendererHelpers.js
+126 silly gunzTarPerm modified mode [ 'lib/RendererHelpers.js', 438, 420 ]
+127 silly gunzTarPerm extractEntry lib/commands/index.js
+128 silly gunzTarPerm modified mode [ 'lib/commands/index.js', 438, 420 ]
+129 silly gunzTarPerm extractEntry lib/commands/install.js
+130 silly gunzTarPerm modified mode [ 'lib/commands/install.js', 438, 420 ]
+131 silly gunzTarPerm extractEntry lib/commands/search.js
+132 silly gunzTarPerm modified mode [ 'lib/commands/search.js', 438, 420 ]
+133 silly gunzTarPerm extractEntry lib/commands/uninstall.js
+134 silly gunzTarPerm modified mode [ 'lib/commands/uninstall.js', 438, 420 ]
+135 silly gunzTarPerm extractEntry test/specs/install_concerns.js
+136 silly gunzTarPerm modified mode [ 'test/specs/install_concerns.js', 438, 420 ]
+137 silly gunzTarPerm extractEntry test/specs/search_concerns.js
+138 silly gunzTarPerm modified mode [ 'test/specs/search_concerns.js', 438, 420 ]
+139 silly gunzTarPerm extractEntry test/specs/type_resolution_concerns.js
+140 silly gunzTarPerm modified mode [ 'test/specs/type_resolution_concerns.js', 438, 420 ]
+141 silly gunzTarPerm extractEntry test/specs/uninstall_concerns.js
+142 silly gunzTarPerm modified mode [ 'test/specs/uninstall_concerns.js', 438, 420 ]
+143 silly gunzTarPerm extractEntry VERSION
+144 silly gunzTarPerm modified mode [ 'VERSION', 438, 420 ]
+145 silly lockFile 45c3cfd4-pm-cache-adapt-cli-0-0-3-package tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package
+146 silly lockFile 45c3cfd4-pm-cache-adapt-cli-0-0-3-package tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package
+147 silly lockFile 7849566c-ache-adapt-cli-0-0-3-package-tgz tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+148 silly lockFile 7849566c-ache-adapt-cli-0-0-3-package-tgz tar://C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+149 verbose chmod C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz 644
+150 silly chown skipping for windows C:\Users\chrisjones.SPONGE\AppData\Roaming\npm-cache\adapt-cli\0.0.3\package.tgz
+151 silly lockFile 3a52ce78- .
+152 silly lockFile 3a52ce78- .
+153 silly publish { name: 'adapt-cli',
+153 silly publish   version: '0.0.3',
+153 silly publish   description: 'Command line tools for Adapt',
+153 silly publish   main: './lib/cli.js',
+153 silly publish   directories: { test: 'test' },
+153 silly publish   dependencies:
+153 silly publish    { bower: '~1.2.7',
+153 silly publish      chalk: '~0.3.0',
+153 silly publish      lodash: '~2.2.1',
+153 silly publish      q: '~0.9.7' },
+153 silly publish   devDependencies:
+153 silly publish    { mocha: '~1.13.0',
+153 silly publish      'expect.js': '~0.2.0',
+153 silly publish      sinon: '~1.7.3',
+153 silly publish      grunt: '~0.4.1',
+153 silly publish      'grunt-mocha-test': '~0.7.0',
+153 silly publish      matchdep: '~0.3.0' },
+153 silly publish   scripts: { test: 'grunt test' },
+153 silly publish   author: '',
+153 silly publish   repository: { type: 'git', url: 'http://github.com/cajones/adapt-cli' },
+153 silly publish   license: 'GPLv3',
+153 silly publish   bin: { adapt: './bin/adapt' },
+153 silly publish   readme: 'Adapt Command Line Interface\r\n============================\r\n\r\nInstallation\r\n------------\r\n\r\nTo install the Adapt CLI, first be sure to install [NodeJS](http://nodejs.org), then from the command line run:-\r\n\r\n\r\n\t\tnpm install -g adapt-cli\r\n\r\n\r\nUsage\r\n-----\r\n\r\nSearching for an Adapt plugin.\r\n\r\n\tadapt search {name or partial name of plugin to search for}\r\n\r\n\r\nInstalling a plugin into your current directory\r\n\r\n\tadapt install {name of plugin}\r\n\r\nUninstalling a plugin from your current directory\r\n\r\n    adapt uninstall {name of plugin}\r\n\r\nAnywhere that you aere required to provide a name of a plugin it can be either fully qualified with \'adapt-\' or optionally you can omit the prefix an just use the plugin name.\r\nTherefore these commands are equivalent:\r\n\r\n    adapt install adapt-my-plugin\r\n    adapt install my-plugin\r\n\r\n\r\nThe Plugin Registry\r\n-------------------\r\n\r\nThe plugin system is powered by [Bower](http://bower.io/). Each plugin should be a valid bower package and they should be registered with the Adapt registry.\r\n\r\n    http://adapt-bower-repository.herokuapp.com/packages/\r\n\r\nPlugins must be registered with the name prefixed with \'adapt-\' in order to find them.\r\n\r\nTag your plugin package with the appropriate keywords in order to get it to appear correctly.\r\n\r\n* *adapt-component*\r\n* *adapt-extension*\r\n* *adapt-menu*\r\n* *adapt-theme*\r\n',
+153 silly publish   readmeFilename: 'README.md',
+153 silly publish   bugs: { url: 'https://github.com/cajones/adapt-cli/issues' },
+153 silly publish   _id: 'adapt-cli@0.0.3',
+153 silly publish   dist: { shasum: '00420debbd4c06d4b27ef45021b8a9edd02bd21e' },
+153 silly publish   _from: '.' }
+154 verbose url raw adapt-cli
+155 verbose url resolving [ 'https://registry.npmjs.org/', './adapt-cli' ]
+156 verbose url resolved https://registry.npmjs.org/adapt-cli
+157 info trying registry request attempt 1 at 17:08:37
+158 http PUT https://registry.npmjs.org/adapt-cli
+159 http 409 https://registry.npmjs.org/adapt-cli
+160 verbose url raw adapt-cli
+161 verbose url resolving [ 'https://registry.npmjs.org/', './adapt-cli' ]
+162 verbose url resolved https://registry.npmjs.org/adapt-cli
+163 info trying registry request attempt 1 at 17:08:39
+164 http GET https://registry.npmjs.org/adapt-cli
+165 http 200 https://registry.npmjs.org/adapt-cli
+166 error publish fail Cannot publish over existing version.
+166 error publish fail Update the 'version' field in package.json and try again.
+166 error publish fail
+166 error publish fail If the previous version was published in error, see:
+166 error publish fail     npm help unpublish
+166 error publish fail
+166 error publish fail To automatically increment version numbers, see:
+166 error publish fail     npm help version
+167 error System Windows_NT 6.1.7601
+168 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+169 error cwd C:\Users\chrisjones.SPONGE\Projects\adapt-cli
+170 error node -v v0.10.21
+171 error npm -v 1.3.11
+172 error code EPUBLISHCONFLICT
+173 verbose exit [ 1, true ]
