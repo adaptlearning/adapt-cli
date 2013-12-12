@@ -13,24 +13,33 @@ To install the Adapt CLI, first be sure to install [NodeJS](http://nodejs.org), 
 Usage
 -----
 
-Searching for an Adapt plugin.
+##### Searching for an Adapt plugin.
 
 	adapt search {name or partial name of plugin to search for}
 
 
-Installing a plugin into your current directory
+##### Installing a plugin into your current directory
 
 	adapt install {name of plugin}
 
-Uninstalling a plugin from your current directory
+Anywhere that you are required to provide a name of a plugin it can be either fully qualified with 'adapt-' or optionally you can omit the prefix an just use the plugin name.
 
-    adapt uninstall {name of plugin}
-
-Anywhere that you aere required to provide a name of a plugin it can be either fully qualified with 'adapt-' or optionally you can omit the prefix an just use the plugin name.
 Therefore these commands are equivalent:
 
     adapt install adapt-my-plugin
     adapt install my-plugin
+
+Installed plugins are saved to `adapt.json`. 
+
+##### Installing plugins previously saved in adapt.json
+
+    adapt install
+
+
+##### Uninstalling a plugin from your current directory
+
+    adapt uninstall {name of plugin}
+
 
 
 The Plugin Registry
