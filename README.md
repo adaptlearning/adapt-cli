@@ -41,7 +41,6 @@ Installed plugins are saved to `adapt.json`.
     adapt uninstall {name of plugin}
 
 
-
 The Plugin Registry
 -------------------
 
@@ -49,11 +48,14 @@ The plugin system is powered by [Bower](http://bower.io/). Each plugin should be
 
     http://adapt-bower-repository.herokuapp.com/packages/
 
-Plugins must be registered with the name prefixed with 'adapt-' in order to find them.
+See [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins) for more information on defining your plugins package.
 
-Tag your plugin package with the appropriate keywords in order to get it to appear correctly.
+##### Registering a plugin
 
-* *adapt-component*
-* *adapt-extension*
-* *adapt-menu*
-* *adapt-theme*
+From within a plugin directory
+
+    adapt register
+
+`name` and `repository` will be read from `bower.json` in the current directory.
+
+The package will be registered with the registry on a first come first serve basis.
