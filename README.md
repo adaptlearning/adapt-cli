@@ -1,6 +1,8 @@
 Adapt Command Line Interface
 ============================
 
+[![Build Status](https://travis-ci.org/adaptlearning/adapt-cli.png?branch=master)](https://travis-ci.org/adaptlearning/adapt-cli)
+
 Installation
 ------------
 
