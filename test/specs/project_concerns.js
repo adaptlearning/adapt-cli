@@ -35,10 +35,6 @@ describe('Given I have an adapt.json project file with plugins', function () {
             fs.unlinkSync('./test/fixtures/adapt-when-i-list-plugins.json');
         });
     });
-    
-});
-
-describe('Given I have an adapt.json project file with plugins', function () {
 
     describe('when I add a plugin', function () {
         before(function () {
@@ -58,6 +54,23 @@ describe('Given I have an adapt.json project file with plugins', function () {
         after(function () {
             fs.unlinkSync('./test/fixtures/adapt-when-I-add-a-plugin.json');
         });
+    });
+
+    describe('when I remove a plugin', function () {
+        before(function () {
+            fs.writeFileSync('./test/fixtures/adapt-when-i-remove-a-plugin.json', JSON.stringify(require('../fixtures/adapt-with-plugins.json')));
+        });
+
+        it('should no longer contain that plugin', function () {
+            var project = new Project('./test/fixtures/adapt-when-i-remove-a-plugin.json');
+            project.remove(new Plugin('component'));
+            expect(project.plugins.length).to.be(1);
+            expect(project.plugins[0].packageName).to.be('adapt-extension');
+        });      
+
+        after(function () {
+            fs.unlinkSync('./test/fixtures/adapt-when-i-remove-a-plugin.json');
+        });  
     });
     
 });
