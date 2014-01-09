@@ -19,7 +19,8 @@
     "sinon": "~1.7.3",
     "grunt": "~0.4.1",
     "grunt-mocha-test": "~0.7.0",
-    "matchdep": "~0.3.0"
+    "matchdep": "~0.3.0",
+    "mockery": "~1.4.0"
   },
   "scripts": {
     "test": "grunt test"
