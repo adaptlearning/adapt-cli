@@ -27,7 +27,8 @@
     "grunt": "~0.4.1",
     "grunt-mocha-test": "~0.7.0",
     "matchdep": "~0.3.0",
-    "rimraf": "~2.2.6"
+    "rimraf": "~2.2.6",
+    "mockery": "~1.4.0"
   },
   "scripts": {
     "test": "grunt test"
