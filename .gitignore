@@ -2,3 +2,4 @@ node_modules
 #  we don't want to include the src file that may be installed by the cli
 src
 bower.json
+adapt.json

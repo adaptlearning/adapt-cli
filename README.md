@@ -75,3 +75,13 @@ From within a plugin directory
 `name` and `repository` will be read from `bower.json` in the current directory.
 
 The package will be registered with the registry on a first come first serve basis.
+
+Release History
+===============
+
+- 0.0.8 - Added 'create' command, fixed Issue #6
+- 0.0.7 - fixed Issue #3
+- 0.0.6 - Added 'register' command
+- 0.0.5 - Added adapt.json (dependency list)
+- 0.0.3 - Added uninstall command
+...          
