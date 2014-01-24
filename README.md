@@ -15,6 +15,20 @@ To install the Adapt CLI, first be sure to install [NodeJS](http://nodejs.org), 
 Usage
 -----
 
+##### Creating an Adapt course
+
+    adapt create {type} {path} [{branch}]
+
+type - What to create. Only the value "course" is currently supported. 
+path - The directory of the new course.
+branch - Optional - The branch of the framework to be downlaoded.
+
+For example...
+
+    adapt create course "My Course"
+
+This will download the Adapt framework and create an new course in the directory "My Course", in your current directory.
+
 ##### Searching for an Adapt plugin.
 
 	adapt search {name or partial name of plugin to search for}
