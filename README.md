@@ -6,10 +6,10 @@ Adapt Command Line Interface
 Installation
 ------------
 
-To install the Adapt CLI, first be sure to install [NodeJS](http://nodejs.org), then from the command line run:-
+To install the Adapt CLI, first be sure to install [NodeJS](http://nodejs.org) and [git](http://git-scm.com/downloads), then from the command line run:-
 
 
-		npm install -g adapt-cli
+        npm install -g adapt-cli
 
 
 Usage
@@ -31,12 +31,12 @@ This will download the Adapt framework and create an new course in the directory
 
 ##### Searching for an Adapt plugin.
 
-	adapt search {name or partial name of plugin to search for}
+    adapt search {name or partial name of plugin to search for}
 
 
 ##### Installing a plugin into your current directory
 
-	adapt install {name of plugin}
+    adapt install {name of plugin}
 
 Anywhere that you are required to provide a name of a plugin it can be either fully qualified with 'adapt-' or optionally you can omit the prefix an just use the plugin name.
 
@@ -79,10 +79,11 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
-- 0.0.9 - fixed Issue #7
-- 0.0.8 - Added 'create' command, fixed Issue #6
-- 0.0.7 - fixed Issue #3
-- 0.0.6 - Added 'register' command
-- 0.0.5 - Added adapt.json (dependency list)
-- 0.0.3 - Added uninstall command
+- 0.0.10 - fixed Issue #2 & #8
+- 0.0.9  - fixed Issue #7
+- 0.0.8  - Added 'create' command, fixed Issue #6
+- 0.0.7  - fixed Issue #3
+- 0.0.6  - Added 'register' command
+- 0.0.5  - Added adapt.json (dependency list)
+- 0.0.3  - Added uninstall command
 ...          
