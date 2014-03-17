@@ -79,6 +79,7 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
+- 0.0.12 - fixed Issue #13
 - 0.0.11 - fixed Issue #12
 - 0.0.10 - fixed Issue #2 & #8
 - 0.0.9  - fixed Issue #7
