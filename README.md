@@ -83,6 +83,7 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
+- 0.0.13 - Added support for versions of plugins (#14) and --version command
 - 0.0.12 - fixed Issue #13
 - 0.0.11 - fixed Issue #12
 - 0.0.10 - fixed Issue #2 & #8
@@ -92,4 +93,4 @@ Release History
 - 0.0.6  - Added 'register' command
 - 0.0.5  - Added adapt.json (dependency list)
 - 0.0.3  - Added uninstall command
-...          
+...
