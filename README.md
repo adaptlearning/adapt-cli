@@ -38,6 +38,10 @@ This will download the Adapt framework and create an new course in the directory
 
     adapt install {name of plugin}
 
+Additionally you can install a specific version of a plugin.
+
+    adapt install {name of plugin}#{version}
+
 Anywhere that you are required to provide a name of a plugin it can be either fully qualified with 'adapt-' or optionally you can omit the prefix an just use the plugin name.
 
 Therefore these commands are equivalent:
