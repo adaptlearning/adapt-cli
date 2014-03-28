@@ -28,7 +28,9 @@ describe('Given I have an adapt.json project file with plugins', function () {
             expect(project.plugins).to.be.an(Array);
             expect(project.plugins.length).to.be(2);
             expect(project.plugins[0].packageName).to.be('adapt-component');
+            expect(project.plugins[0].version).to.be('0.0.1');
             expect(project.plugins[1].packageName).to.be('adapt-extension');
+            expect(project.plugins[1].version).to.be('0.0.2');
         });
 
         after(function () {
@@ -43,12 +45,15 @@ describe('Given I have an adapt.json project file with plugins', function () {
 
         it('should provide a list with the new plugins', function () {
             var project = new Project('./test/fixtures/adapt-when-I-add-a-plugin.json');
-            project.add(new Plugin('theme'));
+            project.add(new Plugin('theme', '0.0.3'));
             expect(project.plugins).to.be.an(Array);
             expect(project.plugins.length).to.be(3);
             expect(project.plugins[0].packageName).to.be('adapt-component');
+            expect(project.plugins[0].version).to.be('0.0.1');
             expect(project.plugins[1].packageName).to.be('adapt-extension');
+            expect(project.plugins[1].version).to.be('0.0.2');
             expect(project.plugins[2].packageName).to.be('adapt-theme');
+            expect(project.plugins[2].version).to.be('0.0.3');
         });
 
         after(function () {
@@ -66,7 +71,8 @@ describe('Given I have an adapt.json project file with plugins', function () {
             project.remove(new Plugin('component'));
             expect(project.plugins.length).to.be(1);
             expect(project.plugins[0].packageName).to.be('adapt-extension');
-        });      
+            expect(project.plugins[0].version).to.be('0.0.2');
+        });
 
         after(function () {
             fs.unlinkSync('./test/fixtures/adapt-when-i-remove-a-plugin.json');
@@ -86,13 +92,14 @@ describe('Given I have not got an adapt.json project file', function () {
 
         it('should create the file', function () {
             var project = new Project('./test/fixtures/adapt-missing.json');
-            project.add(new Plugin('theme'));
+            project.add(new Plugin('theme', '0.0.3'));
 
             expect(fs.existsSync(project.manifestFilePath)).to.be(true);
             
             var created = new Project('./test/fixtures/adapt-missing.json')
             expect(created.plugins.length).to.be(1);
             expect(created.plugins[0].packageName).to.be('adapt-theme');
+            expect(project.plugins[0].version).to.be('0.0.3');
         });
 
         after(function () {

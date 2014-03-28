@@ -10,9 +10,9 @@ describe('Given I have a name', function () {
             expect(plugin.packageName).to.match(/^adapt-package$/);
         });
 
-        it('should default the version to "0.0.0"', function () {
+        it('should default the version to "*"', function () {
             var plugin = new Plugin('package');
-            expect(plugin.version).to.match(/^0.0.0$/);
+            expect(plugin.version).to.match(/^\*$/);
         });
 
         it('should stringify to the bower endpoint', function () {
@@ -55,6 +55,19 @@ describe('Given I have a name', function () {
         it('should prefix the name with "adapt-contrib"', function () {
             var plugin = new Plugin('package', '1.0.0', true);
             expect(plugin.packageName).to.match(/^adapt-contrib-/);
+        });
+    });
+
+    describe('when I create a plugin from a 0.0.0 version', function () {
+        it('should support any version', function () {
+            var plugin = new Plugin('package' ,'0.0.0');
+            expect(plugin.packageName).to.match(/^adapt-package$/);
+            expect(plugin.version).to.match(/^\*$/);
+        });
+
+        it('should stringify to the bower endpoint for any version', function () {
+            var plugin = new Plugin('package', '0.0.0');
+            expect(plugin.toString()).to.match(/^adapt-package$/);
         });
     });
 
