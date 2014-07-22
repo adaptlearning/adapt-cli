@@ -83,6 +83,7 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
+- 0.0.15 - fixed Issue #22
 - 0.0.14 - fixed Issue #15
 - 0.0.13 - Added support for versions of plugins (#14) and --version command
 - 0.0.12 - fixed Issue #13
