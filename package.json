@@ -13,7 +13,7 @@
     "q": "~0.9.7",
     "prompt": "~0.2.12",
     "slug": "~0.4.0",
-    "download": "~0.1.9",
+    "download": "git://github.com/SpongeUK/download.git",
     "url-join": "0.0.1",
     "uuid": "~1.4.1",
     "install": "~0.1.7",
