@@ -83,7 +83,7 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
-- 0.0.16 - fixed dependency of the download package to a fork to avoid version conflict with decompress package. This should be temporary until the conflict is resolved.
+- 0.0.16 - Improved download progress bar; fixed dependency of the download package to a fork to avoid version conflict with decompress package. This should be temporary until the conflict is resolved.
 - 0.0.15 - fixed Issue #22
 - 0.0.14 - fixed Issue #15
 - 0.0.13 - Added support for versions of plugins (#14) and --version command
