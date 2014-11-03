@@ -1,6 +1,6 @@
 {
   "name": "adapt-cli",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Command line tools for Adapt",
   "main": "./lib/cli.js",
   "directories": {
@@ -13,7 +13,7 @@
     "q": "~0.9.7",
     "prompt": "~0.2.12",
     "slug": "~0.4.0",
-    "download": "git://github.com/SpongeUK/download.git",
+    "download": "git://github.com/adaptlearning/download.git",
     "url-join": "0.0.1",
     "uuid": "~1.4.1",
     "install": "~0.1.7",
