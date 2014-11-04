@@ -83,6 +83,7 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
+- 0.0.18 - Fixed Issue #23
 - 0.0.17 - Added extra check current working directory for installing. See Issue #23
 - 0.0.16 - Improved download progress bar; fixed dependency of the download package to a fork to avoid version conflict with decompress package. This should be temporary until the conflict is resolved.
 - 0.0.15 - fixed Issue #22
