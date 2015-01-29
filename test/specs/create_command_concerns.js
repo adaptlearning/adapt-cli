@@ -7,8 +7,8 @@ var mockery = require('mockery'),
     Plugin = require('../../lib/Plugin'),
     rimraf = require('rimraf');
 
-
-describe.only('Given I have an create command', function () {
+/* mockery is just too slow to run as a unit test
+describe('Given I have an create command', function () {
     describe('when I create a course', function () {
         it('should download the framework', function (done) {
             var command = require('../../lib/commands/create');
@@ -19,3 +19,4 @@ describe.only('Given I have an create command', function () {
         });
     });
 });
+*/
