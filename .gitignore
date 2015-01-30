@@ -3,3 +3,5 @@ node_modules
 src
 bower.json
 adapt.json
+.idea
+.idea/workspace.xml

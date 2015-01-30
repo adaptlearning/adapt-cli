@@ -21,6 +21,13 @@ describe('Given I have a name', function () {
         });
     });
 
+    describe('when I create a plugin from a multiple word package name', function () {
+        it('should convert the name to a suitable name with hyphens', function () {
+            var plugin = new Plugin('my adapt package');
+            expect(plugin.packageName).to.match(/^adapt-my-adapt-package$/);
+        });
+    });
+
     describe('when I create a plugin from a specific version package name', function () {
         it('should parse the correct version', function () {
             var plugin = new Plugin('package' ,'1.0.0');
