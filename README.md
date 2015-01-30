@@ -21,13 +21,22 @@ Usage
 
 type - What to create. Only the value "course" is currently supported. 
 path - The directory of the new course.
-branch - Optional - The branch of the framework to be downlaoded.
+branch - Optional - The branch of the framework to be downloaded.
 
 For example...
 
     adapt create course "My Course"
 
 This will download the Adapt framework and create an new course in the directory "My Course", in your current directory.
+
+##### Creating an Adapt component
+
+    adapt create component {name} [{branch}]
+
+name - The name of the new component.
+branch - Optional - The branch of the component template to be downloaded. The default is master.
+
+If you run this in an existing course, the component will be created in the `src/components` directory. Otherwise it will be created in the current directory.
 
 ##### Searching for an Adapt plugin.
 
