@@ -6,8 +6,8 @@ describe('Given I have a name', function () {
             
     describe('when I create a plugin from a package name', function () {
         it('should prefix the name with "adapt"', function () {
-            var plugin = new Plugin('package');
-            expect(plugin.packageName).to.match(/^adapt-package$/);
+            var plugin = new Plugin('myPackage');
+            expect(plugin.packageName).to.match(/^adapt-myPackage$/);
         });
 
         it('should default the version to "*"', function () {
