@@ -83,6 +83,7 @@ The package will be registered with the registry on a first come first serve bas
 Release History
 ===============
 
+- 0.0.23 - Updated NPM Module's version.
 - 0.0.22 - Added the 'ls' command.
 - 0.0.21 - Fixed an issue where the new slug library does not maintain case.
 - 0.0.19 - Removed slug library due to annoying python dependency, added 'create component' command.
