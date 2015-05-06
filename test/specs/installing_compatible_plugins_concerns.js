@@ -57,7 +57,6 @@ describe('Given that I have Adapt Framework version 1.1.1 or earlier', function 
         it('should install it', function (done) {
 
             var context = createContext({
-                renderer: console,
                 pluginCompatibility: '*',
                 frameworkVersion: '1.1.1'
             });
