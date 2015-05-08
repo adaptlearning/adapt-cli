@@ -108,3 +108,21 @@ describe('Given I have not got an adapt.json project file', function () {
     });
     
 });
+
+describe('Given I have a package.json file with a version number', function () {
+    describe('when I get the framework version', function () {
+        var version = "2.0.1";
+        before(function () {
+            fs.writeFileSync('./test/fixtures/adapt-package-version.json', JSON.stringify({ "version": version }));
+        });
+
+        it('should provide the correct version number', function () {
+            var project = new Project(null, './test/fixtures/adapt-package-version.json')
+            expect(project.getFrameworkVersion()).to.be(version);
+        });
+
+        after(function () {
+            fs.unlinkSync('./test/fixtures/adapt-package-version.json');
+        });
+    });
+});
