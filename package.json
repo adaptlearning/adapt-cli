@@ -37,7 +37,7 @@
     "test": "grunt test"
   },
   "author": "",
-  "repository": "http://github.com/cajones/adapt-cli",
+  "repository": "http://github.com/adaptlearning/adapt-cli",
   "license": "GPLv3",
   "bin": {
     "adapt": "./bin/adapt"
