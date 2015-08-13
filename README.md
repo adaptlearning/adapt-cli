@@ -82,6 +82,8 @@ The package will be registered with the registry on a first come first serve bas
 
 Release History
 ===============
+- 2.0.2 - Fixed issue#32 - Error: Cannot find module 'Q' on case sensitive file systems
+- 2.0.1 - Fixed an issue with installing dependencies (https://github.com/adaptlearning/adapt-cli/tree/hotfix/has-no-method-install)
 - 2.0.0 - version bump to 2.0.0
 - 0.0.24 - Pre v2.0.0 release update
 - 0.0.23 - Updated NPM Module's version.
