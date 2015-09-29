@@ -1,9 +1,7 @@
 Adapt Command Line Interface
 ============================
 
-[![Join the chat at https://gitter.im/adaptlearning/adapt-cli](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adaptlearning/adapt-cli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Build Status](https://travis-ci.org/adaptlearning/adapt-cli.png?branch=master)](https://travis-ci.org/adaptlearning/adapt-cli)
+[![Build Status](https://travis-ci.org/adaptlearning/adapt-cli.png?branch=master)](https://travis-ci.org/adaptlearning/adapt-cli)  [![Join the chat at https://gitter.im/adaptlearning/adapt-cli](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adaptlearning/adapt-cli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Installation
 ------------
@@ -21,7 +19,7 @@ Usage
 
     adapt create {type} {path} [{branch}]
 
-type - What to create. Only the value "course" is currently supported. 
+type - What to create. Only the value "course" is currently supported.
 path - The directory of the new course.
 branch - Optional - The branch of the framework to be downlaoded.
 
@@ -51,7 +49,7 @@ Therefore these commands are equivalent:
     adapt install adapt-my-plugin
     adapt install my-plugin
 
-Installed plugins are saved to `adapt.json`. 
+Installed plugins are saved to `adapt.json`.
 
 ##### Installing plugins previously saved in adapt.json
 
