@@ -1,3 +1,14 @@
 #!/usr/bin/env node
+var chalk = require("chalk");
+var fs = require('fs');
+var path = require('path');
+var semver = require('semver');
+var curVer = process.versions.node;
+var pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')));
+var versRange = pkg.engines.node;
+var errString = 'adapt-cli has been tested on node versions between '+pkg.engines.node+', you are curently using ' + curVer + ' - errors may occur.';
+if(semver.satisfies(curVer, pkg.engines.node) === false){
+  console.warn(chalk.red(errString));
+}
 var cli = require('../lib/cli');
 cli.withOptions().withPackage().execute();
