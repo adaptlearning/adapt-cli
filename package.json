@@ -41,7 +41,7 @@
   },
   "author": "",
   "repository": "http://github.com/adaptlearning/adapt-cli",
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "preferGlobal": true,
   "bin": {
     "adapt": "./bin/adapt"
