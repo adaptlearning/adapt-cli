@@ -1,0 +1,8 @@
+{
+    "command": "search",
+    "description": "List out all the plugin(s) in adapt's remote registory or could also search a plugin with supplied partial name.",
+    "usage": [
+        "search",
+        "search <plugin-name>"
+    ]
+}
