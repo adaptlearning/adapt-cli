@@ -42,5 +42,5 @@
   "bin": {
     "adapt": "./bin/adapt"
   },
-  "engines" : { "node" : ">=4.3.0"" }
+  "engines" : { "node" : ">=4.3.0" }
 }
