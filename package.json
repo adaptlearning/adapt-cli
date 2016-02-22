@@ -41,5 +41,6 @@
   "license": "GPLv3",
   "bin": {
     "adapt": "./bin/adapt"
-  }
+  },
+  "engines" : { "node" : ">=4.3.0"" }
 }
