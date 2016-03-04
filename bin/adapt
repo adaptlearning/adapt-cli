@@ -6,8 +6,8 @@ var semver = require('semver');
 var curVer = process.versions.node;
 var pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')));
 var versRange = pkg.engines.node;
-var errString = 'adapt-cli is only compatible with node versions '+pkg.engines.node+', you are curently using ' + curVer + ' - errors may occur.';
-if(semver.satisfies(curVer, pkg.engines.node) === false){
+if(semver.satisfies(curVer, versRange) === false){
+  var errString = 'adapt-cli is only compatible with node versions '+versRange+', you are curently using ' + curVer + ' - errors may occur.';
   console.warn(chalk.red(errString));
   process.exit();
 }
