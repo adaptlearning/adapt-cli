@@ -3,7 +3,8 @@
         "<command>"
     ],
     "commands": {
-        "create":          "Create a new adapt course",
+        "create":          "Create a new adapt course or plugin",
+        "devinstall":      "Get the framework and plugins as git repository",
         "help":            "List out the commands available with adapt-cli",
         "install":         "Install plugin(s) within the adapt course directory",
         "ls":              "List all the plugins name mentioned in adapt.json",
