@@ -14,10 +14,17 @@ describe('Given I have a repository downloader', function () {
                 log: sinon.stub()
             },
             eventEmitter = {
-                on: function (event, handler) {
-                    if(event === 'close') {
-                        setTimeout(handler, 100);
-                    }
+                get: function() {
+                    return this;
+                },
+                dest: function() {
+                    return this;
+                },
+                use: function() {
+                    return this;
+                },
+                run: function (handler) {
+                    setTimeout(handler, 100);
                     return eventEmitter;
                 }
             },
