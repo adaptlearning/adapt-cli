@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
-    "grunt": "~1.0.1",
     "grunt-mocha-test": "~0.13.2",
     "matchdep": "~1.0.1",
     "mocha": "~3.1.2",
