@@ -1,0 +1,7 @@
+{
+    "command": "ls",
+    "description": "List the plugin(s) name with version number mentioned in adapt.json file.",
+    "usage": [
+        "ls"
+    ]
+}

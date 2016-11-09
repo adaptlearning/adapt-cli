@@ -1,0 +1,9 @@
+{
+    "command": "devinstall",
+    "description": "This command will clone the adapt_framework and all the plugins defined in adapt.json as git repos. For more info visit: https://github.com/adaptlearning/adapt-cli/pull/46",
+    "usage": [
+        "devinstall",
+        "devinstall <plugin-name>",
+        "devinstall <plugin-name>#<tag-name>"
+    ]
+}

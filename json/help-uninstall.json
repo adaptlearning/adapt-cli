@@ -1,0 +1,7 @@
+{
+    "command": "uninstall",
+    "description": "Remove a local plugin by its name.",
+    "usage": [
+        "uninstall <plugin-name>"
+    ]
+}

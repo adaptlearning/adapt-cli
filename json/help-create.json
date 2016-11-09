@@ -1,0 +1,11 @@
+{
+    "command": "create",
+    "description": "Create a new adapt course",
+    "usage": [
+        "create <command>"
+    ],
+    "commands": {
+        "course":               "Create new adapt course",
+        "component":            "Create new componentn using template adapt-component"
+    }
+}
