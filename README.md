@@ -82,6 +82,7 @@ The package will be registered with the registry on a first come first serve bas
 
 Release History
 ===============
+- 2.0.4 - Corrected version numbers
 - 2.0.3 - Fixed issue#53 - npm dependency is git url
 - 2.0.2 - Fixed issue#32 - Error: Cannot find module 'Q' on case sensitive file systems
 - 2.0.1 - Fixed an issue with installing dependencies (https://github.com/adaptlearning/adapt-cli/tree/hotfix/has-no-method-install)
