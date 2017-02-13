@@ -80,8 +80,29 @@ From within a plugin directory
 
 The package will be registered with the registry on a first come first serve basis.
 
+##### Unregister a plugin
+
+From within a plugin directory
+
+    adapt unregister
+
+`repository` will be read from `bower.json` in the current directory
+
+Alternatively, from any directory
+
+    adapt unregister owner/name
+
+where `owner` is the GitHub owner and `name` is the name of the plugin
+
+The repository or supplied owner/name must represent a valid GitHub endpoint.
+
+You will be prompted to authenticate with GitHub.
+
+The package will be unregistered with the registry if the authenticated user is a collaborator on the given endpoint or a collaborator on the Adapt framework.
+
 Release History
 ===============
+- 2.0.5 - Added unregister command and corrected some typos
 - 2.0.4 - Corrected version numbers
 - 2.0.3 - Fixed issue#53 - npm dependency is git url
 - 2.0.2 - Fixed issue#32 - Error: Cannot find module 'Q' on case sensitive file systems
