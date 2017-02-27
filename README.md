@@ -90,19 +90,25 @@ From within a plugin directory
 
 Alternatively, from any directory
 
-    adapt unregister owner/name
-
-where `owner` is the GitHub owner and `name` is the name of the plugin
-
-The repository or supplied owner/name must represent a valid GitHub endpoint.
+    adapt unregister <plugin name>
 
 You will be prompted to authenticate with GitHub.
 
 The package will be unregistered with the registry if the authenticated user is a collaborator on the given endpoint or a collaborator on the Adapt framework.
 
+##### Rename a plugin
+
+From any directory
+
+    adapt rename <plugin name> <new plugin name>
+
+You will be prompted to authenticate with GitHub.
+
+The package will be renamed if the authenticated user is a collaborator on the endpoint registered with the plugin or a collaborator on the Adapt framework.
+
 Release History
 ===============
-- 2.0.5 - Added unregister command and corrected some typos
+- 2.0.5 - Added rename and unregister commands and corrected some typos
 - 2.0.4 - Corrected version numbers
 - 2.0.3 - Fixed issue#53 - npm dependency is git url
 - 2.0.2 - Fixed issue#32 - Error: Cannot find module 'Q' on case sensitive file systems
