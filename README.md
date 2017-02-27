@@ -86,7 +86,7 @@ From within a plugin directory
 
     adapt unregister
 
-`repository` will be read from `bower.json` in the current directory
+`name` will be read from `bower.json` in the current directory
 
 Alternatively, from any directory
 
