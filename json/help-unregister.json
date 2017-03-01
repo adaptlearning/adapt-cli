@@ -1,0 +1,8 @@
+{
+    "command": "unregister",
+    "description": "Unregister a plugin at Adapt's remote registry. This command can be run without arguments in a directory which contains the bower.json file for the plugin to be unregistered. Alternatively, specify the name of the plugin as a single argument. Please note that you must authenticate with GitHub to unregister and must be a collaborator on the endpoint registered with the plugin or a collaborator on the Adapt framework. Access to GitHub is for authentication only.",
+    "usage": [
+        "unregister",
+        "unregister <plugin name>"
+    ]
+}
