@@ -1,0 +1,9 @@
+{
+    "command": "create course",
+    "description": "to create new course",
+    "usage": [
+        "create course",
+        "create course <course-name>",
+        "create course <course-name> <branch-name>"
+    ]
+}

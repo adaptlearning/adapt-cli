@@ -1,0 +1,7 @@
+{
+    "command": "rename",
+    "description": "Unregister a plugin at Adapt's remote registry. Specify as two arguments the current name of the plugin to be renamed and a new name. Please note that you must authenticate with GitHub to unregister and must be a collaborator on the endpoint registered with the plugin or a collaborator on the Adapt framework. Access to GitHub is for authentication only.",
+    "usage": [
+        "rename <plugin name> <new plugin name>"
+    ]
+}

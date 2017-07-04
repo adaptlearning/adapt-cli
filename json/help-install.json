@@ -1,0 +1,9 @@
+{
+    "command": "install",
+    "description": "Install plugin(s) mentioned in adapt.json file or could also install a plugin using its name and save that to adapt.json file.",
+    "usage": [
+        "install",
+        "install <plugin-name>",
+        "install <plugin-name>#<tag-name>"
+    ]
+}

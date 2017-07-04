@@ -1,0 +1,18 @@
+{
+    "usage": [
+        "<command>"
+    ],
+    "commands": {
+        "create":          "Create a new Adapt course or plugin",
+        "devinstall":      "Get the framework and plugins as Git repository",
+        "help":            "List out the commands available with adapt-cli",
+        "install":         "Install plugin(s) within the Adapt course directory",
+        "ls":              "List all the plugin names mentioned in adapt.json",
+        "rename":          "Rename a plugin at the Adapt remote registry",
+        "register":        "Register a plugin with the Adapt remote registry",
+        "search":          "List/Search for plugin(s) at the Adapt remote registry",
+        "uninstall":       "Remove a local plugin",
+        "unregister":      "Unregister a plugin from the Adapt remote registry",
+        "version":         "Display version of adapt-cli"
+    }
+}
