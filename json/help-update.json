@@ -1,0 +1,11 @@
+{
+    "command": "update",
+    "description": "Update plugin(s) according to adapt.json or specify particular plugins or groups of plugins to update. In the unusual case that your Adapt project has a bower.json manifest in the root folder, this will be used in preference to adapt.json.",
+    "usage": [
+        "update",
+        "update <group> [<group> ..] where <group> is one of [components|extensions|menu|theme|all]",
+        "update <plugin-name>",
+        "update <plugin-name>#<tag-name>",
+        "update <target> [<target> ..] where target is the name of a plugin or group"
+    ]
+}
