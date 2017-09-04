@@ -18,9 +18,9 @@ Usage
 ```
 adapt create {type} {path} [{branch}]
 ```
-type - What to create. Only the value "course" is currently supported.
-path - The directory of the new course.
-branch - Optional - The branch of the framework to be downlaoded.
+`type` What to create. Only the value "course" is currently supported.  
+`path` The name of the directory you'd like the course to be downloaded to (relative to the current directory)  
+`branch` (optional) The branch of the framework you'd like to use as the basis for your course. If your needs to support Internet Explorer v8, 9 or 10 then set this to `legacy`. If not, leave blank or set to `master`.
 
 For example...
 ```
