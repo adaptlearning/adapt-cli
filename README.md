@@ -18,7 +18,7 @@ Usage
 ```
 adapt create {type} {path} [{branch}]
 ```
-`type` What to create. Only the value "course" is currently supported.  
+`type` What to create. The only types currently supported are `course` and `component`. If you want to create a new Adapt course, use `course`. If you want to develop a new Adapt component, use `component` to download a component template.
 `path` The name of the directory you'd like the course to be downloaded to (relative to the current directory)  
 `branch` (optional) The branch of the framework you'd like to use as the basis for your course. If your needs to support Internet Explorer v8, 9 or 10 then set this to `legacy`. If not, leave blank or set to `master`.
 
