@@ -30,32 +30,6 @@ describe('Given that I have Adapt Framework version 2', function () {
             RendererHelpers.reportCompatibilityWarning.restore();
         });
     });
-
-    describe('When I install a plugin that is not tagged with a framework version', function () {
-        it('should warn that the plugin is incompatible', function (done) {
-
-            var context = createContext({
-                frameworkVersion: '2.0.0',
-                pluginCompatibility: '*'
-            });
-
-            var installCommand = require('../../lib/commands/install')(context);
-
-            installCommand.install(context.renderer, 'plugin', function (err) {
-                console.log(RendererHelpers.reportCompatibilityWarning.called)
-                try {
-                    expect(RendererHelpers.reportCompatibilityWarning.called).to.be(true);
-                    done();
-                }
-                catch(ex) { done(ex) }
-            });
-        });
-
-        after(function() {
-            Project.prototype.getFrameworkVersion.restore();
-            RendererHelpers.reportCompatibilityWarning.restore();
-        });
-    });
 });
 
 describe('Given that I have Adapt Framework version 1.1.1 or earlier', function () {
