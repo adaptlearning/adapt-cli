@@ -34,6 +34,7 @@ describe('Given that I have Adapt Framework version 2', function () {
             Project.prototype.getFrameworkVersion.restore();
             RendererHelpers.reportCompatibilityWarning.restore();
         });
+    });
 });
 
 describe('Given that I have Adapt Framework version 1.1.1 or earlier', function () {
