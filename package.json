@@ -13,6 +13,7 @@
     "debug": "^3.1.0",
     "download": "^6.2.5",
     "grunt": "^1.0.1",
+    "json-lint": "~0.1.0",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "nodegit": "^0.20.3",
