@@ -16,7 +16,7 @@ cli.withOptions().withPackage().execute();
 - Run `node adapt-dev.js help update` for guidance using the update command and for command syntax.
 - Now run `node adapt-dev.js update`. If you installed the latest version of the framework there should not have been any changes to the installed plugins.
 - Attempt to install different versions of various plugins; either by directly specifying them via the `update` command or by editing the manifest and again run `node adapt-dev.js update`. Observe the changes (if any).
-- Explore different scernarios; for example updating multiple plugins or groups of plugins together, try different semver ranges and also try the above with older versions of the Adapt framework.
+- Explore different scenarios; for example updating multiple plugins or groups of plugins together, try different semver ranges and also try the above with older versions of the Adapt framework.
 
 ### Important Notes
 
