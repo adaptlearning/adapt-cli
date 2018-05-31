@@ -1,11 +1,12 @@
 {
     "command": "update",
-    "description": "Update plugin(s) according to adapt.json or specify particular plugins or groups of plugins to update. In the unusual case that your Adapt project has a bower.json manifest in the root folder, this will be used in preference to adapt.json.",
+    "description": "Update plugins to their latest compatible version. You can also specify particular plugins or groups of plugins to update. When specifying individual plugins you can provide a version number or semantic version (semver). Add the --check option for a summary of available updates for the given plugin(s). When using this option no changes are made. Note that in the unusual case that your Adapt project has a bower.json manifest in the root folder, this will be used to compile the list of plugins to update.",
     "usage": [
-        "update",
+        "update [--check]",
         "update <group> [<group> ..] where <group> is one of [components|extensions|menu|theme|all]",
         "update <plugin-name>",
-        "update <plugin-name>#<tag-name>",
+        "update <plugin-name>#<semver>",
+        "update <plugin-name>@<semver>",
         "update <target> [<target> ..] where target is the name of a plugin or group"
     ]
 }

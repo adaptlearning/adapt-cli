@@ -107,6 +107,8 @@ The package will be renamed if the authenticated user is a collaborator on the e
 
 Release History
 ===============
+- 2.0.7 - Added update command and update dependencies; targetting Node v8+
+- 2.0.6 - Fixed issue #49, changed way registry is determined and updated dependencies; targetting Node v6+
 - 2.0.5 - Added rename and unregister commands and corrected some typos
 - 2.0.4 - Corrected version numbers
 - 2.0.3 - Fixed issue#53 - npm dependency is git url
