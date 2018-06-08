@@ -13,6 +13,7 @@
         "search":          "List/Search for plugin(s) at the Adapt remote registry",
         "uninstall":       "Remove a local plugin",
         "unregister":      "Unregister a plugin from the Adapt remote registry",
+        "update":          "Update one or more plugins",
         "version":         "Display version of adapt-cli"
     }
 }
