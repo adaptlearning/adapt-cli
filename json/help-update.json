@@ -1,6 +1,6 @@
 {
     "command": "update",
-    "description": "Update plugins to their latest compatible version. You can also specify particular plugins or groups of plugins to update. When specifying individual plugins you can provide a version number or semantic version (semver). Add the --check option for a summary of available updates for the given plugin(s). When using this option no changes are made. Ensure that there is no bower.json file in your project directory.",
+    "description": "Update plugins to their latest compatible version. You can also specify which plugins to update as arguments. When specifying arguments you can provide an optional semantic version (semver). Add the --check option for a summary of available updates for the given plugin(s). When using this option no changes are made. Ensure that there is no bower.json file in your project directory.",
     "usage": [
         "update [--check]",
         "update <group> [<group> ..] where <group> is one of [components|extensions|menu|theme|all]",

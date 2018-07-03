@@ -1,9 +1,10 @@
 {
     "command": "install",
-    "description": "Install plugin(s) mentioned in adapt.json file or could also install a plugin using its name and save that to adapt.json file.",
+    "description": "Install plugins according to the Adapt manifest (adapt.json). You can also specify which plugins to install as arguments. When specifying arguments you can provide an optional semantic version (semver). If a semver is not given the command will attempt to install the latest compatible version. Add the --dry-run option to simulate an installation without making any changes. Add the --compatible option to override any given semvers: the command will attempt to install the latest compatible version for all requested plugins.",
     "usage": [
-        "install",
+        "install [--dry-run, --compatible]",
         "install <plugin-name>",
-        "install <plugin-name>#<tag-name>"
+        "install <plugin-name>#<semver>",
+        "install <plugin-name>@<semver>",
     ]
 }
