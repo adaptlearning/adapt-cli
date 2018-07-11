@@ -1,6 +1,6 @@
 {
   "name": "adapt-cli",
-  "version": "2.0.8-6",
+  "version": "2.0.7",
   "description": "Command line tools for Adapt",
   "main": "./lib/cli.js",
   "directories": {
