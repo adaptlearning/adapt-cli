@@ -107,6 +107,7 @@ The package will be renamed if the authenticated user is a collaborator on the e
 
 Release History
 ===============
+- 2.0.7 - Added update command, rewritten install command and updated dependencies; targetting Node v8+
 - 2.0.6 - Dependencies updated, registry now targeted consistently, fixed issue #49, CI target set to all Node LTS versions
 - 2.0.5 - Added rename and unregister commands and corrected some typos
 - 2.0.4 - Corrected version numbers
