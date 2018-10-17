@@ -1,0 +1,9 @@
+{
+    "command": "create component",
+    "description": "create new component",
+    "usage": [
+        "create component",
+        "create component <component-name>",
+        "create component <component-name> <branch-name>"
+    ]
+}

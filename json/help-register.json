@@ -1,0 +1,7 @@
+{
+    "command": "register",
+    "description": "Register a plugin to adapt's remote registry by reading bower.json file. Check folowing URL for more detail - https://github.com/adaptlearning/adapt_framework/wiki/Registering-a-plugin",
+    "usage": [
+        "register"
+    ]
+}

@@ -19,6 +19,10 @@ describe('Given I have a repository downloader', function () {
                         setTimeout(handler, 100);
                     }
                     return eventEmitter;
+                },
+                then: function(handler) {
+                    setTimeout(handler, 100);
+                    return this;
                 }
             },
             download = sinon.stub().returns(eventEmitter);
