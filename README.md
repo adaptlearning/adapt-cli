@@ -107,6 +107,7 @@ The package will be renamed if the authenticated user is a collaborator on the e
 
 Release History
 ===============
+- 2.1.1 - Integrated PR 48 and fixed issue with adapt create command
 - 2.1.0 - Fully updated update and install commands
 - 2.0.7 - Added update command, rewritten install command and updated dependencies; targetting Node v8+
 - 2.0.6 - Dependencies updated, registry now targeted consistently, fixed issue #49, CI target set to all Node LTS versions
