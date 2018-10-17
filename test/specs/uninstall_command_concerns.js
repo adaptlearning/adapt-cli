@@ -1,4 +1,5 @@
-var mockery = require('mockery'),
+var fs = require('fs'),
+    mockery = require('mockery'),
     sinon = require('sinon'),
     expect = require('expect.js'),
     Q = require('q'),
@@ -9,27 +10,29 @@ describe('Given I have an uninstall command', function () {
     describe('when I uninstall a plugin', function () {
         var bower = {
                 commands: {}
-            }
+            },
             PackageMeta = {
-            }, 
+            },
             renderer =  {
                 log: sinon.stub()
             };
 
         before(function () {
+            fs.writeFileSync('./adapt.json', JSON.stringify(require('../fixtures/adapt.json')));
+
             mockery.enable();
-            mockery.warnOnUnregistered(false)
-            
+            mockery.warnOnUnregistered(false);
+
             bower.commands.uninstall = sinon.stub().returns({
                 on: function (event, done) {
                     if(event === 'end') {
-                        setTimeout(done, 10, true)    
+                        setTimeout(done, 10, true);
                     }
                     return this;
                 }
             });
             mockery.registerMock('bower', bower);
-            
+
             PackageMeta.getKeywords = sinon.stub().returns(Q.fcall(function () {
                 return ['adapt-component'];
             }));
@@ -53,8 +56,9 @@ describe('Given I have an uninstall command', function () {
         });
 
         after(function () {
+            fs.unlinkSync('./adapt.json');
             mockery.disable();
-        })
+        });
     });
-    
+
 });

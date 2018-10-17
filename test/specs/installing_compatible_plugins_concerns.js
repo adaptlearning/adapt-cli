@@ -1,4 +1,5 @@
-var sinon = require('sinon'),
+var fs = require('fs'),
+    sinon = require('sinon'),
     expect = require('expect.js'),
     Project = require('../../lib/Project'),
     RendererHelpers = require('../../lib/RendererHelpers'),
@@ -6,6 +7,10 @@ var sinon = require('sinon'),
 
 describe('Given that I have Adapt Framework version 2', function () {
     describe('When I install a plugin that is tagged as compatible with Adapt V2 framework version', function () {
+        before(function () {
+            fs.writeFileSync('./adapt.json', JSON.stringify(require('../fixtures/adapt.json')));
+        });
+
         it('should install it', function (done) {
 
             var context = createContext({
@@ -22,6 +27,7 @@ describe('Given that I have Adapt Framework version 2', function () {
         });
 
         after(function() {
+            fs.unlinkSync('./adapt.json');
             Project.prototype.getFrameworkVersion.restore();
             RendererHelpers.reportCompatibilityWarning.restore();
         });
@@ -30,6 +36,10 @@ describe('Given that I have Adapt Framework version 2', function () {
 
 describe('Given that I have Adapt Framework version 1.1.1 or earlier', function () {
     describe('When I install a plugin that is tagged as compatible with Adapt V1.1 framework version', function () {
+        before(function () {
+            fs.writeFileSync('./adapt.json', JSON.stringify(require('../fixtures/adapt.json')));
+        });
+
         it('should install it', function (done) {
 
             var context = createContext({
@@ -46,6 +56,7 @@ describe('Given that I have Adapt Framework version 1.1.1 or earlier', function 
         });
 
         after(function() {
+            fs.unlinkSync('./adapt.json');
             Project.prototype.getFrameworkVersion.restore();
             RendererHelpers.reportCompatibilityWarning.restore();
         });
@@ -54,6 +65,10 @@ describe('Given that I have Adapt Framework version 1.1.1 or earlier', function 
 
 describe('Given that I have Adapt Framework version 1.1.1 or earlier', function () {
     describe('When I install a plugin that is NOT tagged', function () {
+        before(function () {
+            fs.writeFileSync('./adapt.json', JSON.stringify(require('../fixtures/adapt.json')));
+        });
+
         it('should install it', function (done) {
 
             var context = createContext({
@@ -70,6 +85,7 @@ describe('Given that I have Adapt Framework version 1.1.1 or earlier', function 
         });
 
         after(function() {
+            fs.unlinkSync('./adapt.json');
             Project.prototype.getFrameworkVersion.restore();
             RendererHelpers.reportCompatibilityWarning.restore();
         });

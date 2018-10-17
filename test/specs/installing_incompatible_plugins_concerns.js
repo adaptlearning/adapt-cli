@@ -1,11 +1,16 @@
-var sinon = require('sinon'),
+var fs = require('fs'),
+    sinon = require('sinon'),
     expect = require('expect.js'),
     Project = require('../../lib/Project'),
-    RendererHelpers = require('../../lib/RendererHelpers')
+    RendererHelpers = require('../../lib/RendererHelpers'),
     Q = require('q');
 
 describe('Given that I have Adapt Framework version 2', function () {
     describe('When I install a plugin that is tagged as incompatible with Adapt V2 framework version', function () {
+        before(function () {
+            fs.writeFileSync('./adapt.json', JSON.stringify(require('../fixtures/adapt.json')));
+        });
+
         it('should warn that the plugin is incompatible', function (done) {
 
             var context = createContext({
@@ -16,16 +21,16 @@ describe('Given that I have Adapt Framework version 2', function () {
             var installCommand = require('../../lib/commands/install')(context);
 
             installCommand.install(context.renderer, 'plugin', function (err) {
-                console.log(RendererHelpers.reportCompatibilityWarning.called)
                 try {
                     expect(RendererHelpers.reportCompatibilityWarning.called).to.be(true);
                     done();
                 }
-                catch(ex) { done(ex) }
+                catch(ex) { done(ex); }
             });
         });
 
         after(function() {
+            fs.unlinkSync('./adapt.json');
             Project.prototype.getFrameworkVersion.restore();
             RendererHelpers.reportCompatibilityWarning.restore();
         });
@@ -34,6 +39,10 @@ describe('Given that I have Adapt Framework version 2', function () {
 
 describe('Given that I have Adapt Framework version 1.1.1 or earlier', function () {
     describe('When I install a plugin that is tagged as compatible with Adapt V2 framework version', function () {
+        before(function () {
+            fs.writeFileSync('./adapt.json', JSON.stringify(require('../fixtures/adapt.json')));
+        });
+
         it('should warn that the plugin is incompatible', function (done) {
 
             var context = createContext({
@@ -44,16 +53,16 @@ describe('Given that I have Adapt Framework version 1.1.1 or earlier', function 
             var installCommand = require('../../lib/commands/install')(context);
 
             installCommand.install(context.renderer, 'plugin', function (err) {
-                console.log(RendererHelpers.reportCompatibilityWarning.called)
                 try {
                     expect(RendererHelpers.reportCompatibilityWarning.called).to.be(true);
                     done();
                 }
-                catch(ex) { done(ex) }
+                catch(ex) { done(ex); }
             });
         });
 
         after(function() {
+            fs.unlinkSync('./adapt.json');
             Project.prototype.getFrameworkVersion.restore();
             RendererHelpers.reportCompatibilityWarning.restore();
         });
