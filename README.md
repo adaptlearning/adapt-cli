@@ -35,6 +35,10 @@ adapt search {name or partial name of plugin to search for}
 
 ##### Installing a plugin into your current directory
 ```
+adapt install
+```
+When run without arguments this command looks for the `adapt.json` manifest. The command will attempt to install all plugins that it lists, prefering the latest compatible version of each. Run `adapt help install` for more information. To install specific plugins provide the names as a space separated list:
+```
 adapt install {name of plugin}
 ```
 Additionally you can install a specific version of a plugin.
@@ -48,12 +52,20 @@ Therefore these commands are equivalent:
 adapt install adapt-my-plugin
 adapt install my-plugin
 ```
-Installed plugins are saved to `adapt.json`.
 
-##### Installing plugins previously saved in adapt.json
+##### Updating plugins
 ```
-adapt install
+adapt update
 ```
+When run without arguments this command attempts to update all installed plugins to their latest compatible versions. To update specific plugins provide the names as a space separated list:
+```
+adapt update {name of plugin}
+```
+You can also update specific plugins groups:
+```
+adapt update components extensions
+```
+Run `adapt help update` for more information.
 
 ##### Uninstalling a plugin from your current directory
 ```
@@ -107,6 +119,7 @@ The package will be renamed if the authenticated user is a collaborator on the e
 
 Release History
 ===============
+- 2.1.2 - Updated documentation and corrected JSON formatting
 - 2.1.1 - Integrated PR 48 and fixed issue with adapt create command
 - 2.1.0 - Fully updated update and install commands
 - 2.0.7 - Added update command, rewritten install command and updated dependencies; targetting Node v8+
