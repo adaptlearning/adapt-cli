@@ -119,7 +119,7 @@ The package will be renamed if the authenticated user is a collaborator on the e
 
 Release History
 ===============
-- 2.1.4 - Replace nodegit in favour of shell commands
+- 2.1.4 - Replaced nodegit in favour of shell commands
 - 2.1.3 - Updated dependencies and fixed bad variable reference affecting devinstall
 - 2.1.2 - Updated documentation and corrected JSON formatting
 - 2.1.1 - Integrated PR 48 and fixed issue with adapt create command
