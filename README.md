@@ -72,6 +72,16 @@ Run `adapt help update` for more information.
 adapt uninstall {name of plugin}
 ```
 
+##### 'Developer' install
+```
+adapt devinstall
+```
+This command will clone the framework and all the plugins defined in adapt.json as git repos into a directory called 'adapt_framework'.
+
+Once the command has finished running, you will need to change to that directory and run `npm install` before you can use commands like `grunt dev`.
+
+Run `adapt help devinstall` for more information.
+
 The Plugin Registry
 -------------------
 
