@@ -47,7 +47,7 @@ This command reports both the version of the CLI and the version of the Adapt fr
 ### adapt create  
 
 ##### Model:  
-`adapt create <type> <path> [<branch>]`
+`adapt create [<type> <path> <branch>]`
 
 **type**: What to create. Acceptable values are `course` and `component`.   
 **path**: The directory of the new course. Enclose in quotes if the path/name includes spaces.  
@@ -256,6 +256,5 @@ See [Developing plug-ins](https://github.com/adaptlearning/adapt_framework/wiki/
 <div float align=right><a href="#top">Back to Top</a></div>  
 
 ----------------------------
-**Version number:**  2.1.2   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>   
-**Framework versions:**  >=1   
+**Version number:**  2.1.4   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>   
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-hotgraphic/graphs/contributors)  
