@@ -1,165 +1,260 @@
-Adapt Command Line Interface
+Adapt Command Line Interface (CLI)
 ============================
 
-[![Build Status](https://travis-ci.org/adaptlearning/adapt-cli.png?branch=master)](https://travis-ci.org/adaptlearning/adapt-cli)  [![Join the chat at https://gitter.im/adaptlearning/adapt-cli](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adaptlearning/adapt-cli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/adaptlearning/adapt-cli.png?branch=master)](https://travis-ci.org/adaptlearning/adapt-cli)  [![Join the chat at https://gitter.im/adaptlearning/adapt-cli](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adaptlearning/adapt-cli?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)    
 
-Installation
-------------
+The **Adapt CLI** is a command line interface for use with the [Adapt framework](https://github.com/adaptlearning/adapt_framework). Its primary usefulness is to install, update, and uninstall Adapt plug-ins. In doing so, it references the [Adapt Plugin Browser](https://www.adaptlearning.org/index.php/plugin-browser/). Consequently, the CLI includes several commands for working with this plug-in registry. 
 
-To install the Adapt CLI, first be sure to install [NodeJS](http://nodejs.org) and [git](http://git-scm.com/downloads), then from the command line run:-
-```
-npm install -g adapt-cli
-```
+>IMPORTANT: The **Adapt CLI** is not intended to be used with courses in the [Adapt authoring tool](https://github.com/adaptlearning/adapt_authoring). The authoring tool tracks versions of plug-ins in its database. Using the CLI bypasses this tracking.
 
-Usage
------
+## Installation
 
-##### Creating an Adapt course
-```
-adapt create {type} {path} [{branch}]
-```
-`type` What to create. The only types currently supported are `course` and `component`. If you want to create a new Adapt course, use `course`. If you want to develop a new Adapt component, use `component` to download a component template.
-`path` The name of the directory you'd like the course to be downloaded to (relative to the current directory)  
-`branch` (optional) The branch of the framework you'd like to use as the basis for your course. If your needs to support Internet Explorer v8, 9 or 10 then set this to `legacy`. If not, leave blank or set to `master`.
+Before installing the Adapt CLI, you must install [NodeJS](http://nodejs.org) and [git](http://git-scm.com/downloads).  
+To install the Adapt CLI globally, run the following command:  
 
-For example...
-```
-adapt create course "My Course"
-```
-This will download the Adapt framework and create an new course in the directory "My Course", in your current directory.
+`npm install -g adapt-cli`
 
-##### Searching for an Adapt plugin.
-```
-adapt search {name or partial name of plugin to search for}
-```
+Some systems may require elevated permissions in order to install a script globally.
 
-##### Installing a plugin into your current directory
-```
-adapt install
-```
-When run without arguments this command looks for the `adapt.json` manifest. The command will attempt to install all plugins that it lists, prefering the latest compatible version of each. Run `adapt help install` for more information. To install specific plugins provide the names as a space separated list:
-```
-adapt install {name of plugin}
-```
-Additionally you can install a specific version of a plugin.
-```
-adapt install {name of plugin}#{version}
-```
-Anywhere that you are required to provide a name of a plugin it can be either fully qualified with 'adapt-' or optionally you can omit the prefix an just use the plugin name.
 
-Therefore these commands are equivalent:
-```
-adapt install adapt-my-plugin
-adapt install my-plugin
-```
+## Commands  
 
-##### Updating plugins
-```
-adapt update
-```
-When run without arguments this command attempts to update all installed plugins to their latest compatible versions. To update specific plugins provide the names as a space separated list:
-```
-adapt update {name of plugin}
-```
-You can also update specific plugins groups:
-```
-adapt update components extensions
-```
-Run `adapt help update` for more information.
+### adapt version  
 
-##### Uninstalling a plugin from your current directory
-```
-adapt uninstall {name of plugin}
-```
+##### Model:  
+`adapt version` 
 
-##### 'Developer' install
-```
-adapt devinstall
-```
-This command will clone the framework and all the plugins defined in adapt.json as git repos into a directory called 'adapt_framework'.
+This command reports both the version of the CLI and the version of the Adapt framework. The version of the framework is reported as "0.0.0" unless the command is run from the root directory of an installed framework. 
+<div float align=right><a href="#top">Back to Top</a></div>  
 
-Once the command has finished running, you will need to change to that directory and run `npm install` before you can use commands like `grunt dev`.
+### adapt help  
 
-Run `adapt help devinstall` for more information.
+##### Model:  
+`adapt help [<command>]` 
 
-The Plugin Registry
+**command**: A CLI command.  
+
+##### Examples:  
+
+1. To list all the CLI commands with a brief description of each:  
+`adapt help`  
+
+2. To report a brief description of a specific command:  
+`adapt help create`  
+ 
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt create  
+
+##### Model:  
+`adapt create [<type> <path> <branch>]`
+
+**type**: What to create. Acceptable values are `course` and `component`.   
+**path**: The directory of the new course. Enclose in quotes if the path/name includes spaces.  
+**branch**: The branch of the framework to be downloaded. This is optional. If not specified, the master branch will be used. 
+
+##### Examples:  
+
+1. To create an Adapt course *(do not use in conjunction with the Adapt authoring tool)*:  
+`adapt create course "My Course"`  
+This will create a new directory named "My Course" in your current working directory. It will download the Adapt framework from its master branch, including the default course, into the new directory. Before using the course, run:  
+`grunt build`  
+
+2. To create an Adapt course from a specific branch:  
+`adapt create course "My Course" develop`  
+This is the same as example 1 except that the framework will be downloaded from its develop branch, not from the default master branch.
+
+3. To create an empty component:  
+`adapt create component "test-component"`  
+This command is useful for developing new components. It will create a new directory named "test-component" in the current working directory. It will populate the directory with files required for an Adapt component and insert "test-component" into the code where required. 
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt search  
+
+##### Model:  
+`adapt search [<plug-in>]`   
+
+**plug-in**: The optional name of the plug-in that you want to search for. Any part of the name may be used; multiple results may be returned if the partial name is not unique. 
+
+The **search** command searches within [Adapt Plugin Browser](https://www.adaptlearning.org/index.php/plugin-browser/). It will return the plug-in's complete name and its source repository only if the plug-in is registered.
+
+##### Examples:  
+1. To view the name and repository of all plug-ins registered with the Adapt Plugin Browser:  
+`adapt search`  
+
+2. To locate the repository of a known plug-in that is registered:   
+`adapt search adapt-contrib-pageLevelProgress` OR    
+`adapt search contrib-pageLevelProgress` OR  
+`adapt search pageLevel`  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt install 
+
+##### Models:  
+`adapt install <plug-in>[#|@<version>]`  
+`adapt install [--dry-run|--compatible]`  
+
+**plug-in**: The name of the plug-in to be installed. The name may be fully qualified with "adapt-" or the prefix may be omitted. Parts of names are not acceptable.  
+**version**: A specific version number of the plug-in. This is optional.  
+
+##### Examples:  
+1. To install all plug-ins listed in *adapt.json*:  
+`adapt install`
+This command must be run in the root directory of an Adapt framework installation.   
+
+2. To report the plug-ins that will be installed if `adapt install` is run:  
+`adapt install --dry-run`
+This command must be run in the root directory of an Adapt framework installation. 
+
+3. To install versions of all plug-ins listed in *adapt.json* that are compatible with the installed framework version. This overrides any incompatible settings provided on the command line or in *adapt.json*.  
+`adapt install --compatible`
+This command must be run in the root directory of an Adapt framework installation.
+
+4. To install a plug-in that has been registered with the [Adapt Plug-in Browser](https://www.adaptlearning.org/index.php/plugin-browser/) registry:  
+`adapt install adapt-contrib-pageLevelProgress` OR  
+`adapt install contrib-pageLevelProgress`  
+
+5. To install a specific version of a registered plug-in:  
+`adapt install adapt-contrib-pageLevelProgress#1.1.0` OR  
+`adapt install adapt-contrib-pageLevelProgress@1.1.0` OR  
+`adapt install contrib-pageLevelProgress#1.1.0` OR  
+`adapt install contrib-pageLevelProgress@1.1.0`  
+
+6. To use the CLI to install a plug-in that is not registered with [Adapt Plug-in Browser](https://www.adaptlearning.org/index.php/plugin-browser/) registry:  
+    1. Copy the uncompressed folder to the proper location for the type of plug-in. Components: *src/components*. Extensions: *src/extensions*. Menu: *src/menu*. Theme: *src/theme*. Note: The Adapt framework allows only one theme. Uninstall the current before replacing it with an alternative. More than one menu is allowed.  
+    2. Open *adapt.json* in an editor and add the full name of the new component to the list.  
+    3. Run the following command from the course root:  
+    `adapt install`  
+After installation, most CLI commands will operate on the plug-in with the exception of `adapt update`. Plug-ins must be registered with the [Adapt Plugin Browser](https://www.adaptlearning.org/index.php/plugin-browser/) for `adapt update` to succeed.
+
+7. To update all registered plug-ins to their most recent public release:  
+`adapt update`  
+Since no plug-in name is specified in this command, all plug-ins listed in *adapt.json* are reinstalled. Whether the plug-in is updated will be determined by the compatible framework versions specified in *adapt.json*.  If it includes a plug-in that is not registered, it will not be updated.    
+**Note to developers:** The CLI determines newest version by comparing release tags in the GitHub repo. Be sure to use a tag when you release a new version.   
+<div float align=right><a href="#top">Back to Top</a></div>  
+
+### adapt ls  
+
+##### Model:  
+`adapt ls`  
+
+This command lists the name and version number of all plug-ins listed in the *adapt.json* file of the current directory.  
+<div float align=right><a href="#top">Back to Top</a></div>    
+
+### adapt uninstall  
+
+##### Model:  
+`adapt uninstall <plug-in>`  
+
+**plug-in**: The name of the plug-in to be installed. The name may be fully qualified with "adapt-" or the prefix may be omitted. Parts of names are not acceptable. 
+
+##### Examples: 
+1. To uninstall a plug-in:  
+`adapt uninstall adapt-contrib-pageLevelProgress` OR  
+`adapt uninstall contrib-pageLevelProgress`   
+Because the plug-in registry is not referenced during the uninstall process, this command will work whether or not the plug-in is registered with the Adapt Plugin Browser..  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt devinstall
+
+##### Model:  
+`adapt devinstall [<plug-in>[#<version>]]`  
+
+**plug-in**: Name of the plug-in to be cloned.   
+**version**: Version of the plug-in to be installed.  
+
+##### Examples:  
+
+1. To clone as git repositories the Adapt framework and all the plug-ins listed in *adapt.json* of the current directory:  
+`adapt devinstall`  
+
+2. To clone a specific plug-in listed in the *adapt.json*:  
+`adapt devinstall adapt-contrib-matching`  
+
+3. To clone a specific version of a plug-in listed in the *adapt.json*:  
+`adapt devinstall adapt-contrib-matching#v2.2.0`  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt update
+
+##### Models:  
+`adapt update [<plug-in>[#|@<version>]][--check]`  
+`adapt update [components|extensions|menu|theme|all][--check]`
+
+**plug-in**: Name of the plug-in to be cloned.   
+**version**: Version of the plug-in to be installed.  
+Before running the update command, ensure that there is no *bower.json* file in your project directory.
+
+##### Examples:  
+
+1. To report the latest compatible version for each plug-in in the current directory (plug-ins are not updated):  
+`adapt update --check`  
+Note: The `--check` option may be used to report on a specific plug-in or on a complete plug-in group (components, extensions, theme, menu):  
+`adapt update adapt-contrib-matching --check`    
+`adapt update extensions --check`  
+
+2. To update a registered plug-in:  
+`adapt update adapt-contrib-pageLevelProgress` OR  
+`adapt update contrib-pageLevelProgress` 
+
+3. To update a specific version of a registered plug-in:  
+`adapt update adapt-contrib-pageLevelProgress#1.1.0` OR  
+`adapt update adapt-contrib-pageLevelProgress@1.1.0` OR  
+`adapt update contrib-pageLevelProgress#1.1.0` OR  
+`adapt update contrib-pageLevelProgress@1.1.0`  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt register  
+
+##### Command:  
+`adapt register`  
+
+This command must be run from within the root directory of the plug-in you want to register. "name" and "repository" will be read from *bower.json* in the current directory. The plug-in name must be prefixed with "adapt-" and each word separated with a hyphen (-). Plug-in names are checked against those already registered to avoid duplicates.  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt rename  
+
+##### Command:  
+`adapt rename <current-name> <new-name>`  
+
+**current-name**: Name of the plug-in currently used in the plug-in registry.   
+**new-name**: Name proposed to replace the current plug-in name.
+
+Please note that you must authenticate with GitHub to use **rename**. You must be a collaborator on the endpoint registered with the plug-in or a collaborator on the Adapt framework. Access to GitHub is for authentication only.  
+
+##### Example:  
+
+1. To rename a plug-in:  
+`adapt rename adapt-incorrectName adapt-betterName`  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+### adapt unregister  
+
+##### Command:  
+`adapt unregister [<plug-in>]`  
+
+**plug-in**: Name of the plug-in currently used in the plug-in registry.   
+
+Please note that you must authenticate with GitHub to use **unregister**. You must be a collaborator on the endpoint registered with the plug-in or a collaborator on the Adapt framework. Access to GitHub is for authentication only.  
+
+##### Examples:  
+
+1. To unregister a plug-in while in the root directory of the plug-in:  
+`adapt unregister`  
+
+2. To unregister a plug-in by name:  
+`adapt unregister adapt-myMistake`  
+<div float align=right><a href="#top">Back to Top</a></div>
+
+
+The Plug-in Registry
 -------------------
 
-The plugin system is powered by [Bower](http://bower.io/). Each plugin should be a valid bower package and they should be registered with the Adapt registry.
-```
-http://adapt-bower-repository.herokuapp.com/packages/
-```
-See [Developing plugins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins) for more information on defining your plugins package.
+The Adapt community maintains the [Adapt Plugin Browser](https://www.adaptlearning.org/index.php/plugin-browser/) as a convenient registry of components, extensions, themes, and menus. The plug-in system is powered by [Bower](http://bower.io/): http://adapt-bower-repository.herokuapp.com/packages/. To register, a plug-in must be a valid bower package with *bower.json*, and have a unique name that is prefixed with "adapt-".  
 
-##### Registering a plugin
+See [Developing plug-ins](https://github.com/adaptlearning/adapt_framework/wiki/Developing-plugins) for more information on defining your plug-in's package and on [registering your plug-in](https://github.com/adaptlearning/adapt_framework/wiki/Registering-a-plugin).  
+<div float align=right><a href="#top">Back to Top</a></div>  
 
-From within a plugin directory
-```
-adapt register
-```
-`name` and `repository` will be read from `bower.json` in the current directory.
-
-The package will be registered with the registry on a first come first serve basis.
-
-##### Unregister a plugin
-
-From within a plugin directory
-```
-adapt unregister
-```
-`name` will be read from `bower.json` in the current directory
-
-Alternatively, from any directory
-```
-adapt unregister <plugin name>
-```
-You will be prompted to authenticate with GitHub.
-
-The package will be unregistered with the registry if the authenticated user is a collaborator on the given endpoint or a collaborator on the Adapt framework.
-
-##### Rename a plugin
-
-From any directory
-```
-adapt rename <plugin name> <new plugin name>
-```
-You will be prompted to authenticate with GitHub.
-
-The package will be renamed if the authenticated user is a collaborator on the endpoint registered with the plugin or a collaborator on the Adapt framework.
-
-Release History
-===============
-- 2.1.4 - Replaced nodegit in favour of shell commands
-- 2.1.3 - Updated dependencies and fixed bad variable reference affecting devinstall
-- 2.1.2 - Updated documentation and corrected JSON formatting
-- 2.1.1 - Integrated PR 48 and fixed issue with adapt create command
-- 2.1.0 - Fully updated update and install commands
-- 2.0.7 - Added update command, rewritten install command and updated dependencies; targetting Node v8+
-- 2.0.6 - Dependencies updated, registry now targeted consistently, fixed issue #49, CI target set to all Node LTS versions
-- 2.0.5 - Added rename and unregister commands and corrected some typos
-- 2.0.4 - Corrected version numbers
-- 2.0.3 - Fixed issue#53 - npm dependency is git url
-- 2.0.2 - Fixed issue#32 - Error: Cannot find module 'Q' on case sensitive file systems
-- 2.0.1 - Fixed an issue with installing dependencies (https://github.com/adaptlearning/adapt-cli/tree/hotfix/has-no-method-install)
-- 2.0.0 - version bump to 2.0.0
-- 0.0.24 - Pre v2.0.0 release update
-- 0.0.23 - Updated NPM Module's version.
-- 0.0.22 - Added the 'ls' command.
-- 0.0.21 - Fixed an issue where the new slug library does not maintain case.
-- 0.0.19 - Removed slug library due to annoying python dependency, added 'create component' command.
-- 0.0.18 - Fixed Issue #23
-- 0.0.17 - Added extra check current working directory for installing. See Issue #23
-- 0.0.16 - Improved download progress bar; fixed dependency of the download package to a fork to avoid version conflict with decompress package. This should be temporary until the conflict is resolved.
-- 0.0.15 - fixed Issue #22
-- 0.0.14 - fixed Issue #15
-- 0.0.13 - Added support for versions of plugins (#14) and --version command
-- 0.0.12 - fixed Issue #13
-- 0.0.11 - fixed Issue #12
-- 0.0.10 - fixed Issue #2 & #8
-- 0.0.9  - fixed Issue #7
-- 0.0.8  - Added 'create' command, fixed Issue #6
-- 0.0.7  - fixed Issue #3
-- 0.0.6  - Added 'register' command
-- 0.0.5  - Added adapt.json (dependency list)
-- 0.0.3  - Added uninstall command
-...
+----------------------------
+**Version number:**  2.1.4   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>   
+**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-hotgraphic/graphs/contributors)  
