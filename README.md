@@ -212,6 +212,8 @@ Note: The `--check` option may be used to report on a specific plug-in or on a c
 This command must be run from within the root directory of the plug-in you want to register. "name" and "repository" will be read from *bower.json* in the current directory. The plug-in name must be prefixed with "adapt-" and each word separated with a hyphen (-). Plug-in names are checked against those already registered to avoid duplicates.  
 <div float align=right><a href="#top">Back to Top</a></div>
 
+URL format must be of the form git://github.com/<user>/<repo_name>.git
+
 ### adapt rename  
 
 ##### Command:  
