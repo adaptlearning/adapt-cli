@@ -39,7 +39,7 @@ This command reports both the version of the CLI and the version of the Adapt fr
 1. To list all the CLI commands with a brief description of each:  
 `adapt help`  
 
-2. To report a brief description of a specific command:  
+1. To report a brief description of a specific command:  
 `adapt help create`  
  
 <div float align=right><a href="#top">Back to Top</a></div>
@@ -60,11 +60,11 @@ This command reports both the version of the CLI and the version of the Adapt fr
 This will create a new directory named "My Course" in your current working directory. It will download the Adapt framework from its master branch, including the default course, into the new directory. Before using the course, run:  
 `grunt build`  
 
-2. To create an Adapt course from a specific branch:  
+1. To create an Adapt course from a specific branch:  
 `adapt create course "My Course" develop`  
 This is the same as example 1 except that the framework will be downloaded from its develop branch, not from the default master branch.
 
-3. To create an empty component:  
+1. To create an empty component:  
 `adapt create component "test-component"`  
 This command is useful for developing new components. It will create a new directory named "test-component" in the current working directory. It will populate the directory with files required for an Adapt component and insert "test-component" into the code where required. 
 <div float align=right><a href="#top">Back to Top</a></div>
@@ -82,7 +82,7 @@ The **search** command searches within [Adapt Plugin Browser](https://www.adaptl
 1. To view the name and repository of all plug-ins registered with the Adapt Plugin Browser:  
 `adapt search`  
 
-2. To locate the repository of a known plug-in that is registered:   
+1. To locate the repository of a known plug-in that is registered:   
 `adapt search adapt-contrib-pageLevelProgress` OR    
 `adapt search contrib-pageLevelProgress` OR  
 `adapt search pageLevel`  
@@ -102,32 +102,32 @@ The **search** command searches within [Adapt Plugin Browser](https://www.adaptl
 `adapt install`
 This command must be run in the root directory of an Adapt framework installation.   
 
-2. To report the plug-ins that will be installed if `adapt install` is run:  
+1. To report the plug-ins that will be installed if `adapt install` is run:  
 `adapt install --dry-run`
 This command must be run in the root directory of an Adapt framework installation. 
 
-3. To install versions of all plug-ins listed in *adapt.json* that are compatible with the installed framework version. This overrides any incompatible settings provided on the command line or in *adapt.json*.  
+1. To install versions of all plug-ins listed in *adapt.json* that are compatible with the installed framework version. This overrides any incompatible settings provided on the command line or in *adapt.json*.  
 `adapt install --compatible`
 This command must be run in the root directory of an Adapt framework installation.
 
-4. To install a plug-in that has been registered with the [Adapt Plug-in Browser](https://www.adaptlearning.org/index.php/plugin-browser/) registry:  
+1. To install a plug-in that has been registered with the [Adapt Plug-in Browser](https://www.adaptlearning.org/index.php/plugin-browser/) registry:  
 `adapt install adapt-contrib-pageLevelProgress` OR  
 `adapt install contrib-pageLevelProgress`  
 
-5. To install a specific version of a registered plug-in:  
+1. To install a specific version of a registered plug-in:  
 `adapt install adapt-contrib-pageLevelProgress#1.1.0` OR  
 `adapt install adapt-contrib-pageLevelProgress@1.1.0` OR  
 `adapt install contrib-pageLevelProgress#1.1.0` OR  
 `adapt install contrib-pageLevelProgress@1.1.0`  
 
-6. To use the CLI to install a plug-in that is not registered with [Adapt Plug-in Browser](https://www.adaptlearning.org/index.php/plugin-browser/) registry:  
+1. To use the CLI to install a plug-in that is not registered with [Adapt Plug-in Browser](https://www.adaptlearning.org/index.php/plugin-browser/) registry:  
     1. Copy the uncompressed folder to the proper location for the type of plug-in. Components: *src/components*. Extensions: *src/extensions*. Menu: *src/menu*. Theme: *src/theme*. Note: The Adapt framework allows only one theme. Uninstall the current before replacing it with an alternative. More than one menu is allowed.  
-    2. Open *adapt.json* in an editor and add the full name of the new component to the list.  
-    3. Run the following command from the course root:  
+    1. Open *adapt.json* in an editor and add the full name of the new component to the list.  
+    1. Run the following command from the course root:  
     `adapt install`  
 After installation, most CLI commands will operate on the plug-in with the exception of `adapt update`. Plug-ins must be registered with the [Adapt Plugin Browser](https://www.adaptlearning.org/index.php/plugin-browser/) for `adapt update` to succeed.
 
-7. To update all registered plug-ins to their most recent public release:  
+1. To update all registered plug-ins to their most recent public release:  
 `adapt update`  
 Since no plug-in name is specified in this command, all plug-ins listed in *adapt.json* are reinstalled. Whether the plug-in is updated will be determined by the compatible framework versions specified in *adapt.json*.  If it includes a plug-in that is not registered, it will not be updated.    
 **Note to developers:** The CLI determines newest version by comparing release tags in the GitHub repo. Be sure to use a tag when you release a new version.   
@@ -168,10 +168,10 @@ Because the plug-in registry is not referenced during the uninstall process, thi
 1. To clone as git repositories the Adapt framework and all the plug-ins listed in *adapt.json* of the current directory:  
 `adapt devinstall`  
 
-2. To clone a specific plug-in listed in the *adapt.json*:  
+1. To clone a specific plug-in listed in the *adapt.json*:  
 `adapt devinstall adapt-contrib-matching`  
 
-3. To clone a specific version of a plug-in listed in the *adapt.json*:  
+1. To clone a specific version of a plug-in listed in the *adapt.json*:  
 `adapt devinstall adapt-contrib-matching#v2.2.0`  
 <div float align=right><a href="#top">Back to Top</a></div>
 
@@ -193,11 +193,11 @@ Note: The `--check` option may be used to report on a specific plug-in or on a c
 `adapt update adapt-contrib-matching --check`    
 `adapt update extensions --check`  
 
-2. To update a registered plug-in:  
+1. To update a registered plug-in:  
 `adapt update adapt-contrib-pageLevelProgress` OR  
 `adapt update contrib-pageLevelProgress` 
 
-3. To update a specific version of a registered plug-in:  
+1. To update a specific version of a registered plug-in:  
 `adapt update adapt-contrib-pageLevelProgress#1.1.0` OR  
 `adapt update adapt-contrib-pageLevelProgress@1.1.0` OR  
 `adapt update contrib-pageLevelProgress#1.1.0` OR  
@@ -244,7 +244,7 @@ Please note that you must authenticate with GitHub to use **unregister**. You mu
 1. To unregister a plug-in while in the root directory of the plug-in:  
 `adapt unregister`  
 
-2. To unregister a plug-in by name:  
+1. To unregister a plug-in by name:  
 `adapt unregister adapt-myMistake`  
 <div float align=right><a href="#top">Back to Top</a></div>
 
