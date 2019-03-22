@@ -47,11 +47,11 @@ This command reports both the version of the CLI and the version of the Adapt fr
 ### adapt create  
 
 ##### Model:  
-`adapt create [<type> <path> <branch>]`
+`adapt create [<type> <path> <branch|tag>]`
 
 **type**: What to create. Acceptable values are `course` and `component`.   
 **path**: The directory of the new course. Enclose in quotes if the path/name includes spaces.  
-**branch**: The branch of the framework to be downloaded. This is optional. If not specified, the master branch will be used. 
+**branch|tag**: The branch or tag name of the framework to be downloaded. This is optional. If not specified, the master branch will be used. 
 
 ##### Examples:  
 
@@ -61,8 +61,12 @@ This will create a new directory named "My Course" in your current working direc
 `grunt build`  
 
 1. To create an Adapt course from a specific branch:  
-`adapt create course "My Course" develop`  
-This is the same as example 1 except that the framework will be downloaded from its develop branch, not from the default master branch.
+`adapt create course "My Course" legacy`  
+This is the same as example 1 except that the framework will be downloaded from the 'legacy' branch, not from the default master branch.
+
+1. To create an Adapt course from a specific tag:  
+`adapt create course "My Course" v3.5.1`
+This is the same as example 1 except that v3.5.1 of the framework will be downloaded, rather than the master branch.
 
 1. To create an empty component:  
 `adapt create component "test-component"`  
