@@ -3,6 +3,7 @@
   "version": "2.1.13",
   "description": "Command line tools for Adapt",
   "main": "./lib/cli.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
@@ -13,12 +14,13 @@
     "chalk": "^2.4.1",
     "debug": "^4.1.0",
     "download": "^7.1.0",
+    "fs-extra": "^10.0.0",
+    "globs": "^0.1.4",
     "grunt": "^1.0.3",
     "inquirer": "^7.3.3",
     "json-lint": "^0.1.0",
-    "lodash": "^4.17.11",
+    "lodash-es": "^4.17.21",
     "mkdirp": "^0.5.1",
-    "npm": "^6.4.1",
     "q": "^1.5.1",
     "q-io": "^1.13.6",
     "request": "^2.88.0",
@@ -27,16 +29,8 @@
     "url-join": "^4.0.0",
     "uuid": "^3.3.2"
   },
-  "devDependencies": {
-    "expect.js": "^0.3.1",
-    "grunt-mocha-test": "^0.13.3",
-    "matchdep": "^2.0.0",
-    "mocha": "^5.2.0",
-    "mockery": "^2.1.0",
-    "rimraf": "^2.6.2",
-    "sinon": "^7.1.0"
-  },
   "scripts": {
+    "start": "node ./bin/adapt.mjs",
     "test": "grunt test"
   },
   "author": "",
@@ -44,6 +38,20 @@
   "license": "GPL-3.0",
   "preferGlobal": true,
   "bin": {
-    "adapt": "./bin/adapt"
+    "adapt": "./bin/adapt.mjs"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "grunt-mocha-test": "^0.13.3",
+    "matchdep": "^2.0.0",
+    "mocha": "^5.2.0",
+    "mockery": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "sinon": "^7.1.0",
+    "eslint": "^7.31.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   }
 }

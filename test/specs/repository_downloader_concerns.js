@@ -2,7 +2,7 @@ var mockery = require('mockery'),
     sinon = require('sinon'),
     expect = require('expect.js'),
     Q = require('q'),
-    Constants = require('../../lib/Constants'),
+    CONSTANTS = require('../../lib/CONSTANTS'),
     Project = require('../../lib/Project'),
     Plugin = require('../../lib/Plugin'),
     rimraf = require('rimraf');
@@ -36,7 +36,7 @@ describe('Given I have a repository downloader', function () {
             var RepositoryDownloader = require('../../lib/RepositoryDownloader'),
                 downloader = new RepositoryDownloader({
                     repository : 'https://github.com/adaptlearning/adapt-cli/',
-                    branch : 'master' 
+                    branch : 'master'
                 });
 
             downloader.fetch(location)
@@ -51,5 +51,5 @@ describe('Given I have a repository downloader', function () {
             mockery.disable();
         });
     });
-    
+
 });

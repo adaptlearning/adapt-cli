@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+export default function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             }
         }
 	});
-	
+
     grunt.registerTask('default', ['mochaTest']);
     grunt.registerTask('test', ['mochaTest']);
 };
