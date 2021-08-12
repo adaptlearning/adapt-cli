@@ -6,6 +6,6 @@
     ],
     "commands": {
         "course":               "Create new adapt course",
-        "component":            "Create new componentn using template adapt-component"
+        "component":            "Create new component using template adapt-component"
     }
 }

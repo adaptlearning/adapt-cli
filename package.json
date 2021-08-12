@@ -2,7 +2,7 @@
   "name": "adapt-cli",
   "version": "2.1.13",
   "description": "Command line tools for Adapt",
-  "main": "./lib/cli.js",
+  "main": "./lib/api.js",
   "type": "module",
   "directories": {
     "test": "test"
