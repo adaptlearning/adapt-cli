@@ -1,5 +1,0 @@
-# Ignore library files.
-/src/core/libraries/*.js
-
-# Ignore built output.
-/build/
