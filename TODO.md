@@ -4,7 +4,7 @@
 2. Refactor
   * ~~commands/build~~
   * ~~commands/help~~
-  * commands/uninstall
+  * ~~commands/uninstall~~
   * commands/update
   * commands/create/component
   * commands/register
@@ -13,6 +13,7 @@
   * commands/unregister
   * ~~commands/install~~
   * ~~commands/create~~
+  * ~~commands/create/course~~
   * ~~commands/devinstall~~
   * ~~commands/ls~~
   * ~~commands/version~~
@@ -20,4 +21,4 @@
   a. json output is good
   b. non-interactive / interactivity
   c. good error output
-4. Get tests working
+4. Get tests working against new code
