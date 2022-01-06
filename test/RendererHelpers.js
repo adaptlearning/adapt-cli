@@ -11,10 +11,6 @@ export function reportFailure (logger, err) {
   logger?.log(chalk.red('Oh dear, something went wrong.'), err?.message || '')
 }
 
-export function reportInvalidFrameworkDirectory (logger) {
-  logger?.log(chalk.red('Fatal error: please run above commands in adapt course directory.'))
-}
-
 async function confirm (plugin) {
   const schema = [
     {
