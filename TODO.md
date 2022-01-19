@@ -29,5 +29,3 @@
   b. json output is good
   c. good error output
 5. ~~Get tests working against new code~~
-
-9:30 14th Andrew

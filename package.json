@@ -1,12 +1,9 @@
 {
   "name": "adapt-cli",
-  "version": "2.1.13",
+  "version": "3.0.0",
   "description": "Command line tools for Adapt",
   "main": "./lib/api.js",
   "type": "module",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
     "async": "^3.2.3",
     "bower": "^1.8.13",
@@ -25,16 +22,11 @@
     "url-join": "^4.0.0",
     "uuid": "^3.3.2"
   },
-  "scripts": {
-    "start": "node ./bin/adapt.mjs",
-    "test": "grunt test"
-  },
-  "author": "",
   "repository": "http://github.com/adaptlearning/adapt-cli",
   "license": "GPL-3.0",
   "preferGlobal": true,
   "bin": {
-    "adapt": "./bin/adapt.mjs"
+    "adapt": "./bin/adapt.js"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
