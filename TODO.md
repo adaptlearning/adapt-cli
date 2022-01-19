@@ -19,13 +19,15 @@
   * ~~commands/ls~~
   * ~~commands/version~~
 3. Final bits
-  * Duplicates plugin names in install, update, uninstall
-  * Tests
+  * ~~Duplicates plugin names in install, update, uninstall~~
+  * ~~Tests~~
+  * ~~Bower config / multi registry search~~
+  * ~~npm modules~~
   * Return error objects where relevant
-3. Ensure api is working
-  a. json output is good
-  b. non-interactive / interactivity
+4. Ensure api is working
+  a. non-interactive / interactivity
+  b. json output is good
   c. good error output
-4. Get tests working against new code
+5. ~~Get tests working against new code~~
 
 9:30 14th Andrew
