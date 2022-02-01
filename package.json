@@ -9,6 +9,7 @@
     "bower": "^1.8.13",
     "bower-endpoint-parser": "^0.2.2",
     "chalk": "^2.4.1",
+    "decompress": "^4.2.1",
     "download": "^7.1.0",
     "find-up": "^6.2.0",
     "fs-extra": "^10.0.0",
@@ -16,8 +17,9 @@
     "inquirer": "^7.3.3",
     "json-lint": "^0.1.0",
     "lodash-es": "^4.17.21",
+    "parse-github-url": "^1.0.2",
     "request": "^2.88.0",
-    "semver": "^5.6.0",
+    "semver": "^7.3.5",
     "speakingurl": "^14.0.1",
     "url-join": "^4.0.0",
     "uuid": "^3.3.2"

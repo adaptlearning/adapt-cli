@@ -23,9 +23,14 @@
   * ~~Tests~~
   * ~~Bower config / multi registry search~~
   * ~~npm modules~~
-  * Return error objects where relevant
 4. Ensure api is working
-  a. non-interactive / interactivity
-  b. json output is good
-  c. good error output
+  * ~~merge all Targets into Plugin~~
+  * ~~rewrite update task to mirror install task code~~
+  * ~~add path install to bower and clone install~~
+  * ~~add schemas support~~
+  * ~~add Plugin.fromPath()~~
+  * create api functions
+  * non-interactive / interactivity
+  * json output is good
+  * good error output
 5. ~~Get tests working against new code~~
