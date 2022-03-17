@@ -1,49 +1,40 @@
 {
   "name": "adapt-cli",
-  "version": "2.1.14",
+  "version": "3.0.0",
   "description": "Command line tools for Adapt",
-  "main": "./lib/cli.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "./lib/api.js",
+  "type": "module",
   "dependencies": {
-    "async": "^3.1.0",
-    "bower": "^1.8.4",
+    "async": "^3.2.3",
+    "bower": "^1.8.13",
     "bower-endpoint-parser": "^0.2.2",
     "chalk": "^2.4.1",
-    "debug": "^4.1.0",
+    "decompress": "^4.2.1",
     "download": "^7.1.0",
-    "grunt": "^1.0.3",
+    "find-up": "^6.2.0",
+    "fs-extra": "^10.0.0",
+    "globs": "^0.1.4",
     "inquirer": "^7.3.3",
     "json-lint": "^0.1.0",
-    "lodash": "^4.17.11",
-    "mkdirp": "^0.5.1",
-    "npm": "^6.4.1",
-    "q": "^1.5.1",
-    "q-io": "^1.13.6",
+    "lodash-es": "^4.17.21",
+    "parse-github-url": "^1.0.2",
     "request": "^2.88.0",
-    "semver": "^5.6.0",
+    "semver": "^7.3.5",
     "speakingurl": "^14.0.1",
     "url-join": "^4.0.0",
     "uuid": "^3.3.2"
   },
-  "devDependencies": {
-    "expect.js": "^0.3.1",
-    "grunt-mocha-test": "^0.13.3",
-    "matchdep": "^2.0.0",
-    "mocha": "^5.2.0",
-    "mockery": "^2.1.0",
-    "rimraf": "^2.6.2",
-    "sinon": "^7.1.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "author": "",
   "repository": "http://github.com/adaptlearning/adapt-cli",
   "license": "GPL-3.0",
   "preferGlobal": true,
   "bin": {
-    "adapt": "./bin/adapt"
+    "adapt": "./bin/adapt.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
   }
 }
