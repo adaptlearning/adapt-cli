@@ -45,9 +45,6 @@
     "semantic-release": "^19.0.3"
   },
   "private": true,
-  "scripts": {
-    "postversion": "cp package.json bower.json"
-  },
   "release": {
     "plugins": [
       [
