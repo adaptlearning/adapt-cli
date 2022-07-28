@@ -44,7 +44,6 @@
     "conventional-changelog-eslint": "^3.0.9",
     "semantic-release": "^19.0.3"
   },
-  "private": true,
   "release": {
     "plugins": [
       [
