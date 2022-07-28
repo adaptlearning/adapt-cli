@@ -24,7 +24,6 @@
     "url-join": "^4.0.0",
     "uuid": "^3.3.2"
   },
-  "repository": "http://github.com/adaptlearning/adapt-cli",
   "license": "GPL-3.0",
   "preferGlobal": true,
   "bin": {
