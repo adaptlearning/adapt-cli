@@ -16,7 +16,6 @@ To install the Adapt CLI globally, run the following command:
 
 Some systems may require elevated permissions in order to install a script globally.
 
-
 ## Commands
 
 ### adapt version
