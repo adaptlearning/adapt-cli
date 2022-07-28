@@ -2,9 +2,8 @@
 Describe your issue here.
 
 ### Your environment
-* version (AT/Framework)
-* which browser and its version
-* device(s) + operating system(s)
+* version of the cli
+* operating system(s)
 
 ### Steps to reproduce
 Tell us how to reproduce this issue.
