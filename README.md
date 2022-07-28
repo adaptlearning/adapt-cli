@@ -46,6 +46,7 @@ This command reports both the version of the CLI and the version of the Adapt fr
 
 ### adapt create
 
+
 ##### Model:
 `adapt create [<type> <path> <branch|tag>]`
 
