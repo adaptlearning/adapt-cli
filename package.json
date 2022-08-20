@@ -17,12 +17,12 @@
     "inquirer": "^7.3.3",
     "json-lint": "^0.1.0",
     "lodash-es": "^4.17.21",
+    "node-fetch": "^3.2.10",
     "parse-github-url": "^1.0.2",
-    "request": "^2.88.0",
     "semver": "^7.3.5",
     "speakingurl": "^14.0.1",
     "url-join": "^4.0.0",
-    "uuid": "^3.3.2"
+    "uuid": "^8.3.2"
   },
   "license": "GPL-3.0",
   "preferGlobal": true,
