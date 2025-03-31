@@ -10,7 +10,7 @@
     "bower-endpoint-parser": "^0.2.2",
     "chalk": "^2.4.1",
     "decompress": "^4.2.1",
-    "download": "^7.1.0",
+    "download": "^8.0.0",
     "find-up": "^6.2.0",
     "fs-extra": "^10.0.0",
     "globs": "^0.1.4",
