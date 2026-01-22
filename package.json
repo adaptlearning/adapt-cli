@@ -14,7 +14,7 @@
     "find-up": "^6.2.0",
     "fs-extra": "^10.0.0",
     "globs": "^0.1.4",
-    "inquirer": "^7.3.3",
+    "inquirer": "^13.2.1",
     "json-lint": "^0.1.0",
     "lodash-es": "^4.17.21",
     "node-fetch": "^3.2.10",
