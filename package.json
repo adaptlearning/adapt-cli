@@ -59,7 +59,8 @@
         "@semantic-release/git",
         {
           "assets": [
-            "package.json"
+            "package.json",
+            "bower.json"
           ],
           "message": "Chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
