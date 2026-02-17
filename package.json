@@ -30,18 +30,14 @@
     "adapt": "./bin/adapt.js"
   },
   "devDependencies": {
-    "eslint": "^7.31.0",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-eslint": "^6.0.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.5",
-    "@semantic-release/npm": "^9.0.1",
-    "@semantic-release/release-notes-generator": "^10.0.3",
-    "conventional-changelog-eslint": "^3.0.9",
-    "semantic-release": "^19.0.3"
+    "eslint": "^7.31.0",
+    "semantic-release": "^25.0.2"
   },
   "release": {
     "plugins": [
@@ -63,8 +59,7 @@
         "@semantic-release/git",
         {
           "assets": [
-            "package.json",
-            "bower.json"
+            "package.json"
           ],
           "message": "Chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
