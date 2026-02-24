@@ -16,7 +16,7 @@
     "fs-extra": "^10.0.0",
     "globs": "^0.1.4",
     "inquirer": "^7.3.3",
-    "json-lint": "^0.1.0",
+    "json-parse-even-better-errors": "^5.0.0",
     "lodash-es": "^4.17.21",
     "node-fetch": "^3.2.10",
     "parse-github-url": "^1.0.2",
@@ -33,11 +33,11 @@
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-eslint": "^6.0.0",
+    "eslint": "^7.31.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint": "^7.31.0",
     "semantic-release": "^25.0.2"
   },
   "release": {
