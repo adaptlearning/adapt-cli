@@ -3,6 +3,7 @@
   "version": "3.3.4",
   "description": "Command line tools for Adapt",
   "main": "./lib/api.js",
+  "repository": "github:adaptlearning/adapt-cli",
   "type": "module",
   "dependencies": {
     "async": "^3.2.3",
