@@ -33,11 +33,11 @@
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-eslint": "^6.0.0",
-    "eslint": "^7.31.0",
-    "eslint-config-standard": "^16.0.3",
+    "eslint": "^10.6.0",
+    "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^7.3.0",
     "semantic-release": "^25.0.2"
   },
   "release": {
